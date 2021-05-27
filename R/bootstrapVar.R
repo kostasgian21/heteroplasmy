@@ -52,7 +52,8 @@ bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FA
   }
   if (sigmaOpt==TRUE) {
     message("Correceted by a fitted sigmoid function, ie a four-parameter log-logistic function")
-    heteropVar=SEB*((n - opti)/n)/(coeC+(coeD-coeC)/(1+exp(coeB*(log(n)-log(coeE)))))
+    # heteropVar=SEB*((n - opti)/n)/(coeC+(coeD-coeC)/(1+exp(coeB*(log(n)-log(coeE)))))
+    heteropVar=SEB*(((n - opti)*(1+exp(coeB*(log(n)-log(coeE)))))/(n*(coeC+(coeD-coeC))))
 
   }
 
