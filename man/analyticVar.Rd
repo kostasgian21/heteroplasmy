@@ -7,7 +7,12 @@
 analyticVar(data, normal = FALSE)
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE".}
+\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+a dataframe).}
+
+\item{normal}{Parameter that indicates if the normal approximation should be used
+instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
+Default is FALSE.}
 }
 \description{
 This function allows you to read mouse heteroplasmy data from external files.
@@ -15,5 +20,9 @@ This function allows you to read mouse heteroplasmy data from external files.
 \examples{
 analyticVar(data)
 }
-\keyword{data}
+\keyword{error}
 \keyword{heteroplasmy}
+\keyword{of}
+\keyword{standard}
+\keyword{the}
+\keyword{variance,}

@@ -1,8 +1,12 @@
 #' A Function to read mouse heteroplasmy data
 #'
 #' This function allows you to read mouse heteroplasmy data from external files.
-#' @param nameD Either "HB" or "LE".
-#' @keywords heteroplasmy data
+#' @param normal Parameter that indicates if the normal approximation should be used
+#' instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
+#' Default is FALSE.
+#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' a dataframe).
+#' @keywords standard error of the variance, heteroplasmy
 #' @export
 #' @examples
 #' analyticVar(data)
@@ -10,6 +14,7 @@
 
 analyticVar <- function(data,normal=FALSE) {
   n=length(which(!is.na(data)))
+  X.1=as.data.frame(X.1)
   X.1 = data
   #X.1=X.1/100
   h0=mean(X.1)

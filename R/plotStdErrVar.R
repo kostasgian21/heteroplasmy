@@ -55,18 +55,17 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","c
   names(resultMeans)[4]<-"corBoots with g(x)"
 
   #plot the results
-  for (i in 1:4){
+  for (i in 1:5){
     plot(y=resultMeans[,i],x=ns,ylab="Var(h)",xlab="#instance",
          col = cl[i],type = "p",main="h from HB oocyte data",cex =1.2,
          # col = cl[i],type = "p",main=TeX(r'(h from HB oocyte data $\mu$)'),cex =1.2,
-         ylim = c(0,max(resultMeans[,1:4])*2))
+         ylim = c(0,max(resultMeans[,1:5])*2))
     for (k in 1:length(ns)) {
       arrows(x0=ns[k],x1=ns[k], y0=resultMeans[k,i]-resultMeans[k,i+5], y1=resultMeans[k,i]+resultMeans[k,i+5],
              col = cl[i],code=3, angle=90, length=0.1)
     }
     par(new=TRUE)
   }
-  legend("topright", legend=colnames(resultMeans[,1:4]),
+  legend("topright", legend=colnames(resultMeans[,1:5]),
          col=cl, lty=1:2, cex=0.8)#box.lty=0
-
 }
