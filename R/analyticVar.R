@@ -1,6 +1,6 @@
-#' A Function to read mouse heteroplasmy data
+#' Analytic calculation of the standard error of the variance
 #'
-#' This function allows you to read mouse heteroplasmy data from external files.
+#' This function calculates analytically the standard error of the variance.
 #' @param normal Parameter that indicates if the normal approximation should be used
 #' instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
 #' Default is FALSE.

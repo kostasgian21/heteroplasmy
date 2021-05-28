@@ -1,17 +1,12 @@
 Package: heteroplasmy
 Title: Calculation of the standard error of the variance for heteroplasmy data
 Version: 0.0.0.9000
-Authors@R: c(
-    person(given = "Kostas",
-           family = "Giannakis",
+Authors@R: 
+    person(given = "StochasticBio",
+           family = "Group",
            role =  c("aut", "cre"),
            email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID")),
-	person(given = "Iain",
-           family = "Johnston",
-           role =  c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID")))
+           comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: The package offers different methods to quantify uncertainty by calculating the standard errros of the variance of given data. The included functions are primarily aimed to heteroplasmy data, which are not assumed to follow a predefined distribution and the sample size is usually low. Includes, there is a set of synthetic datasets to use, as well as real heteroplasmy data from mouse specimen, found in (xxx Iain's paper xxx) The code and the methods described in the package are used in the (xxx our report xxx), so please cite that work in case you use the heteroplasmy package.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license

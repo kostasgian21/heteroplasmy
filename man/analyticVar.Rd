@@ -2,7 +2,7 @@
 % Please edit documentation in R/analyticVar.R
 \name{analyticVar}
 \alias{analyticVar}
-\title{A Function to read mouse heteroplasmy data}
+\title{Analytic calculation of the standard error of the variance}
 \usage{
 analyticVar(data, normal = FALSE)
 }
@@ -15,7 +15,7 @@ instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics
 Default is FALSE.}
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files.
+This function calculates analytically the standard error of the variance.
 }
 \examples{
 analyticVar(data)
