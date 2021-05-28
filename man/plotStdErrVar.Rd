@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotStdErrVar.R
 \name{plotStdErrVar}
 \alias{plotStdErrVar}
-\title{A Function to read mouse heteroplasmy data}
+\title{An example plotting function}
 \usage{
 plotStdErrVar(
   data,
@@ -11,13 +11,27 @@ plotStdErrVar(
 )
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE".}
+\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+a dataframe).}
+
+\item{functions}{Choose the subset of the functions you wish use for the calculation and
+subsequent plot of the standard error of the variance. You can use one or a combination
+of "normalApr", "analytic","bootstrap","correctedBoot", and "jackknife". For now,
+it outputs all of the aforementioned methods!}
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files.
+This function is used as a toy example on how to represent the data statistics
+regarding the variance of the sample. The mean variance and its standard error
+are depicted. Note that this is just an illustration to show that the analytic
+and the resampling approaches almost match each other.
 }
 \examples{
-plotStdErrVar(data)
+# size of the sample
+n=50
+#generate a random sample of size n from a normal distribution
+data_ex=rnorm(n,0.5,0.1)
+plotStdErrVar(data_ex)
 }
-\keyword{data}
-\keyword{heteroplasmy}
+\keyword{eror}
+\keyword{plot}
+\keyword{standard}

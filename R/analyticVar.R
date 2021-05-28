@@ -9,7 +9,16 @@
 #' @keywords standard error of the variance, heteroplasmy
 #' @export
 #' @examples
+#' # size of the sample
+#' n=50
+#' #generate a random sample of size n from a normal distribution
+#' data_ex=rnorm(n,0.5,0.1)
 #' analyticVar(data)
+#'
+#' mouseData=readHeteroplasmyData("HB")
+#' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
+#' analyticVar(mouseData1)
+
 
 
 analyticVar <- function(data,normal=FALSE) {

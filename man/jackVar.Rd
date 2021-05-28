@@ -2,18 +2,31 @@
 % Please edit documentation in R/jackVar.R
 \name{jackVar}
 \alias{jackVar}
-\title{A Function to read mouse heteroplasmy data}
+\title{A jackknife method to compute the uncertainty of  heteroplasmy data}
 \usage{
 jackVar(data)
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE".}
+\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+a dataframe). Its size should be >=2}
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files.
+Similarly to the main bootstrapVar function that implements the bootstra method to measure the
+standard error of the variance, the jackknife technique is another resampling method that can
+be used for the same purpose. Unlike bootstrapVar, jackVar (and very jackknife method) is deterministic
+and doesn not rely on randomness, but instead it uses removals of the sample points, one each
+time to calculate different sub-samples of size (n-1). Note that the size of the input data
+should be strictly greater than 1.
 }
 \examples{
+# size of the sample
+n=50
+#generate a random sample of size n from a normal distribution
+data_ex=rnorm(n,0.5,0.1)
 jackVar(data)
+
+mouseData=readHeteroplasmyData("HB")
+mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
+jackVar(mouseData1)
 }
-\keyword{data}
-\keyword{heteroplasmy}
+\keyword{jackknife,uncertainty,heteroplasmy,resampling}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/bootstrapVar.R
 \name{bootstrapVar}
 \alias{bootstrapVar}
-\title{A Function to read mouse heteroplasmy data}
+\title{A boostap method to calculate the standard error of the variance}
 \usage{
 bootstrapVar(
   data,
@@ -13,13 +13,42 @@ bootstrapVar(
 )
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE".}
+\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+a dataframe).}
+
+\item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
+the samples, the better the bootstrap outcome.}
+
+\item{biased}{A logical parameter to indicate if the user wants the biased version. Resampling
+techniques always underestimate statistics like the variance or the standard error of it
+for small samples.}
+
+\item{corrected}{Simle correction with a factor of 2.61 that was experimentally found. It is
+included also in the case of sigmaOpt=TRUE}
+
+\item{sigmaOpt}{The outcome of the bootstrap resampling with a fitted sigmoid function g(x)
+with four parameters. Derived through simulations on both real heteroplasmy data and various
+synthetic ones. Try the plotStdErrVar function in this package to observe it.}
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files.
+This function usies the bootrstap method to calculate the uncertainty of the variance of a
+given sample based on random resampling. The number of the resamples is a parameter (default
+is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
+the sigmaOpt parameter) which has been seen to improve the precision of the calculation (see
+our report/paper). Given that the resampling methods underestimate the uncertainty and thus
+provide a biased estimation, we offer the the unbiased method as a default, although the user
+may change this option through the biased parameter for experimental purposes (they are
+strongly advised not to do for real problems with small samples).
 }
 \examples{
+# size of the sample
+n=50
+#generate a random sample of size n from a normal distribution
+data_ex=rnorm(n,0.5,0.1)
 bootstrapVar(data)
+
+mouseData=readHeteroplasmyData("HB")
+mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
+bootstrapVar(mouseData1,sigmaOpt=TRUE)
 }
-\keyword{data}
-\keyword{heteroplasmy}
+\keyword{bootstrap,uncertainty,heteroplasmy,resampling}

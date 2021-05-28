@@ -1,11 +1,37 @@
-#' A Function to read mouse heteroplasmy data
+#' A boostap method to calculate the standard error of the variance
 #'
-#' This function allows you to read mouse heteroplasmy data from external files.
-#' @param nameD Either "HB" or "LE".
-#' @keywords heteroplasmy data
+#' This function usies the bootrstap method to calculate the uncertainty of the variance of a
+#' given sample based on random resampling. The number of the resamples is a parameter (default
+#' is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
+#' the sigmaOpt parameter) which has been seen to improve the precision of the calculation (see
+#' our report/paper). Given that the resampling methods underestimate the uncertainty and thus
+#' provide a biased estimation, we offer the the unbiased method as a default, although the user
+#' may change this option through the biased parameter for experimental purposes (they are
+#' strongly advised not to do for real problems with small samples).
+#' @param sigmaOpt The outcome of the bootstrap resampling with a fitted sigmoid function g(x)
+#' with four parameters. Derived through simulations on both real heteroplasmy data and various
+#' synthetic ones. Try the plotStdErrVar function in this package to observe it.
+#' @param corrected Simle correction with a factor of 2.61 that was experimentally found. It is
+#' included also in the case of sigmaOpt=TRUE
+#' @param biased A logical parameter to indicate if the user wants the biased version. Resampling
+#' techniques always underestimate statistics like the variance or the standard error of it
+#'  for small samples.
+#' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
+#' the samples, the better the bootstrap outcome.
+#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' a dataframe).
+#' @keywords bootstrap,uncertainty,heteroplasmy,resampling
 #' @export
 #' @examples
+#' # size of the sample
+#' n=50
+#' #generate a random sample of size n from a normal distribution
+#' data_ex=rnorm(n,0.5,0.1)
 #' bootstrapVar(data)
+#'
+#' mouseData=readHeteroplasmyData("HB")
+#' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
+#' bootstrapVar(mouseData1,sigmaOpt=TRUE)
 
 bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FALSE) {
   n=length(which(!is.na(data)))

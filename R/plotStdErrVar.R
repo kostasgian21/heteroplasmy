@@ -1,11 +1,23 @@
-#' A Function to read mouse heteroplasmy data
+#' An example plotting function
 #'
-#' This function allows you to read mouse heteroplasmy data from external files.
-#' @param nameD Either "HB" or "LE".
-#' @keywords heteroplasmy data
+#' This function is used as a toy example on how to represent the data statistics
+#' regarding the variance of the sample. The mean variance and its standard error
+#' are depicted. Note that this is just an illustration to show that the analytic
+#' and the resampling approaches almost match each other.
+#' @param functions Choose the subset of the functions you wish use for the calculation and
+#' subsequent plot of the standard error of the variance. You can use one or a combination
+#'  of "normalApr", "analytic","bootstrap","correctedBoot", and "jackknife". For now,
+#'  it outputs all of the aforementioned methods!
+#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' a dataframe).
+#' @keywords plot standard eror
 #' @export
 #' @examples
-#' plotStdErrVar(data)
+#' # size of the sample
+#' n=50
+#' #generate a random sample of size n from a normal distribution
+#' data_ex=rnorm(n,0.5,0.1)
+#' plotStdErrVar(data_ex)
 
 plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","correctedBoot","jackknife"),...) {
   functions <- list(...)
