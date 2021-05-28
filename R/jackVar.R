@@ -8,7 +8,7 @@
 #' should be strictly greater than 1.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe). Its size should be >=2
-#' @keywords jackknife,uncertainty,heteroplasmy,resampling
+#' @keywords jackknife uncertainty heteroplasmy resampling
 #' @export
 #' @examples
 #' # size of the sample

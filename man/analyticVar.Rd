@@ -28,5 +28,7 @@ mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 analyticVar(mouseData1)
 }
+\keyword{error}
 \keyword{heteroplasmy}
-\keyword{standard,error,variance,}
+\keyword{standard}
+\keyword{variance}

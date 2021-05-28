@@ -29,4 +29,7 @@ mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 jackVar(mouseData1)
 }
-\keyword{jackknife,uncertainty,heteroplasmy,resampling}
+\keyword{heteroplasmy}
+\keyword{jackknife}
+\keyword{resampling}
+\keyword{uncertainty}

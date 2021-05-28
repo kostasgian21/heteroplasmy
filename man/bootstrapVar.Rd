@@ -51,4 +51,7 @@ mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 bootstrapVar(mouseData1,sigmaOpt=TRUE)
 }
-\keyword{bootstrap,uncertainty,heteroplasmy,resampling}
+\keyword{bootstrap}
+\keyword{heteroplasmy}
+\keyword{resampling}
+\keyword{uncertainty}

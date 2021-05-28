@@ -6,7 +6,7 @@
 #' Default is FALSE.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
-#' @keywords standard,error,variance, heteroplasmy
+#' @keywords standard error variance heteroplasmy
 #' @export
 #' @examples
 #' # size of the sample

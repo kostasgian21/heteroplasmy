@@ -11,7 +11,7 @@ bootstrapVarCor(data, nrep = 1000)
 a dataframe).}
 
 \item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
-the samples, the better the bootstrap outcome.}
+the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).}
 }
 \description{
 This function is simply the bootstrapVar with the correction argument being TRUE. it is
@@ -28,4 +28,14 @@ mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 bootstrapVarCor(mouseData1,nrep=10000)
 }
-\keyword{bootstrapVarCor,corrected}
+\references{
+\url{https://en.wikipedia.org/}
+}
+\seealso{
+\code{\link{bootstrapVar}}
+}
+\author{
+Kostas and Iain, \email{us@example.com}
+}
+\keyword{bootstrapVarCor}
+\keyword{corrected}

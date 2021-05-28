@@ -10,7 +10,7 @@
 #' it outputs all of the aforementioned methods!
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
-#' @keywords plot,standard,error
+#' @keywords plot standard error
 #' @export
 #' @examples
 #' # size of the sample

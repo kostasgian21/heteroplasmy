@@ -32,4 +32,6 @@ n=50
 data_ex=rnorm(n,0.5,0.1)
 plotStdErrVar(data_ex)
 }
-\keyword{plot,standard,error}
+\keyword{error}
+\keyword{plot}
+\keyword{standard}

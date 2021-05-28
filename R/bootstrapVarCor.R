@@ -3,10 +3,13 @@
 #' This function is simply the bootstrapVar with the correction argument being TRUE. it is
 #' provided as a seperate function for usability.
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
-#' the samples, the better the bootstrap outcome.
+#' the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
-#' @keywords bootstrapVarCor,corrected
+#' @author Kostas and Iain, \email{us@@example.com}
+#' @references \url{https://en.wikipedia.org/}
+#' @seealso \code{\link{bootstrapVar}}
+#' @keywords bootstrapVarCor corrected
 #' @export
 #' @examples
 #' # size of the sample

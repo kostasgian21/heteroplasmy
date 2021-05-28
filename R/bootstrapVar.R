@@ -20,7 +20,7 @@
 #' the samples, the better the bootstrap outcome.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
-#' @keywords bootstrap,uncertainty,heteroplasmy,resampling
+#' @keywords bootstrap uncertainty heteroplasmy resampling
 #' @export
 #' @examples
 #' # size of the sample
