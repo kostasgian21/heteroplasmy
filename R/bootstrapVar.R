@@ -1,6 +1,6 @@
 #' A boostap method to calculate the standard error of the variance
 #'
-#' This function usies the bootrstap method to calculate the uncertainty of the variance of a
+#' This function uses the bootrstap method to calculate the uncertainty of the variance of a
 #' given sample based on random resampling. The number of the resamples is a parameter (default
 #' is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
 #' the sigmaOpt parameter) which has been seen to improve the precision of the calculation (see
@@ -18,7 +18,7 @@
 #'  for small samples.
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome.
-#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
 #' @keywords bootstrap,uncertainty,heteroplasmy,resampling
 #' @export

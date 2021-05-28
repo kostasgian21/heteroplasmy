@@ -2,6 +2,7 @@
 
 export(analyticVar)
 export(bootstrapVar)
+export(bootstrapVarCor)
 export(jackVar)
 export(plotStdErrVar)
 export(readHeteroplasmyData)

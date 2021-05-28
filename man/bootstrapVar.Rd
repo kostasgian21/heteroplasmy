@@ -13,7 +13,7 @@ bootstrapVar(
 )
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
 a dataframe).}
 
 \item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
@@ -31,7 +31,7 @@ with four parameters. Derived through simulations on both real heteroplasmy data
 synthetic ones. Try the plotStdErrVar function in this package to observe it.}
 }
 \description{
-This function usies the bootrstap method to calculate the uncertainty of the variance of a
+This function uses the bootrstap method to calculate the uncertainty of the variance of a
 given sample based on random resampling. The number of the resamples is a parameter (default
 is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
 the sigmaOpt parameter) which has been seen to improve the precision of the calculation (see

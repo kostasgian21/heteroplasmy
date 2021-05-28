@@ -7,7 +7,7 @@
 analyticVar(data, normal = FALSE)
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
 a dataframe).}
 
 \item{normal}{Parameter that indicates if the normal approximation should be used
@@ -28,9 +28,5 @@ mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 analyticVar(mouseData1)
 }
-\keyword{error}
 \keyword{heteroplasmy}
-\keyword{of}
-\keyword{standard}
-\keyword{the}
-\keyword{variance,}
+\keyword{standard,error,variance,}

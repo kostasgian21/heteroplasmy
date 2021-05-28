@@ -6,11 +6,11 @@
 #' and the resampling approaches almost match each other.
 #' @param functions Choose the subset of the functions you wish use for the calculation and
 #' subsequent plot of the standard error of the variance. You can use one or a combination
-#'  of "normalApr", "analytic","bootstrap","correctedBoot", and "jackknife". For now,
-#'  it outputs all of the aforementioned methods!
-#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' of "normalApr", "analytic","bootstrap","correctedBoot", and "jackknife". For now,
+#' it outputs all of the aforementioned methods!
+#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe).
-#' @keywords plot standard eror
+#' @keywords plot,standard,error
 #' @export
 #' @examples
 #' # size of the sample

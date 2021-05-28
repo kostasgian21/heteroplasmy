@@ -11,7 +11,7 @@ plotStdErrVar(
 )
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
 a dataframe).}
 
 \item{functions}{Choose the subset of the functions you wish use for the calculation and
@@ -32,6 +32,4 @@ n=50
 data_ex=rnorm(n,0.5,0.1)
 plotStdErrVar(data_ex)
 }
-\keyword{eror}
-\keyword{plot}
-\keyword{standard}
+\keyword{plot,standard,error}

@@ -7,7 +7,7 @@
 jackVar(data)
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which be transformed into
+\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
 a dataframe). Its size should be >=2}
 }
 \description{

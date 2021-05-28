@@ -6,7 +6,7 @@
 #' and doesn not rely on randomness, but instead it uses removals of the sample points, one each
 #' time to calculate different sub-samples of size (n-1). Note that the size of the input data
 #' should be strictly greater than 1.
-#' @param data The input data in the form of a dataframe or matrix (which be transformed into
+#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe). Its size should be >=2
 #' @keywords jackknife,uncertainty,heteroplasmy,resampling
 #' @export

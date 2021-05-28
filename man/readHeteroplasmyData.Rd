@@ -2,7 +2,7 @@
 % Please edit documentation in R/readHeteroplasmyData.R
 \name{readHeteroplasmyData}
 \alias{readHeteroplasmyData}
-\title{A Function to read mouse heteroplasmy data}
+\title{A Function to read mouse heteroplasmy data (not finished!)}
 \usage{
 readHeteroplasmyData(nameD = "HB")
 }
@@ -10,7 +10,7 @@ readHeteroplasmyData(nameD = "HB")
 \item{nameD}{Either "HB" or "LE".}
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files.
+This function allows you to read mouse heteroplasmy data from external files. Use with caution for now.
 }
 \examples{
 readHeteroplasmyData(nameD="LE")
