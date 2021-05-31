@@ -5,7 +5,7 @@
 #' instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
 #' Default is FALSE.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe).
+#' a dataframe). NA values are omitted.
 #' @keywords standard error variance heteroplasmy
 #' @export
 #' @examples
@@ -22,7 +22,15 @@
 
 
 analyticVar <- function(data,normal=FALSE) {
-  n=length(which(!is.na(data)))
+  if (typeof(data)!="double") {
+    stop("Invalid data type. Input data should be of type double")
+  }
+  if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
+    warning("There were NA values in the input data and they were ommitted.")
+  }
+
+  X.1=X.1[which(!is.na(X.1[]))]
+  n=length(X.1)
   X.1=as.data.frame(X.1)
   X.1 = data
   #X.1=X.1/100

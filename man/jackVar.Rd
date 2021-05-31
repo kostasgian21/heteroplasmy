@@ -8,7 +8,7 @@ jackVar(data)
 }
 \arguments{
 \item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe). Its size should be >=2}
+a dataframe). Its size should be >=2. NA values are omitted.}
 }
 \description{
 Similarly to the main bootstrapVar function that implements the bootstra method to measure the

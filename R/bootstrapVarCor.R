@@ -5,11 +5,11 @@
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe).
+#' a dataframe). NA values are omitted.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \url{https://en.wikipedia.org/}
 #' @seealso \code{\link{bootstrapVar}}
-#' @keywords bootstrapVarCor corrected
+#' @keywords bootstrapVarCor, fitted
 #' @export
 #' @examples
 #' # size of the sample

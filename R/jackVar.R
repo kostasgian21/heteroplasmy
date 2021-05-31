@@ -7,7 +7,7 @@
 #' time to calculate different sub-samples of size (n-1). Note that the size of the input data
 #' should be strictly greater than 1.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe). Its size should be >=2
+#' a dataframe). Its size should be >=2. NA values are omitted.
 #' @keywords jackknife uncertainty heteroplasmy resampling
 #' @export
 #' @examples
@@ -22,7 +22,8 @@
 #' jackVar(mouseData1)
 
 jackVar <- function(data) {
-  n=length(which(!is.na(data)))
+  X.1=X.1[which(!is.na(X.1[]))]
+  n=length(X.1)
   X.1 = data
   #X.1=X.1/100
   h0=mean(X.1)

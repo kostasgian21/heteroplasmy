@@ -8,7 +8,7 @@ bootstrapVarCor(data, nrep = 1000)
 }
 \arguments{
 \item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe).}
+a dataframe). NA values are omitted.}
 
 \item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
 the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).}
@@ -37,5 +37,5 @@ bootstrapVarCor(mouseData1,nrep=10000)
 \author{
 Kostas and Iain, \email{us@example.com}
 }
-\keyword{bootstrapVarCor}
-\keyword{corrected}
+\keyword{bootstrapVarCor,}
+\keyword{fitted}

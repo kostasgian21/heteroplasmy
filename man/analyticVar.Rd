@@ -8,7 +8,7 @@ analyticVar(data, normal = FALSE)
 }
 \arguments{
 \item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe).}
+a dataframe). NA values are omitted.}
 
 \item{normal}{Parameter that indicates if the normal approximation should be used
 instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).

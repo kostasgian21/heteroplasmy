@@ -19,7 +19,7 @@
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe).
+#' a dataframe). NA values are omitted.
 #' @keywords bootstrap uncertainty heteroplasmy resampling
 #' @export
 #' @examples
@@ -34,7 +34,8 @@
 #' bootstrapVar(mouseData1,sigmaOpt=TRUE)
 
 bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FALSE) {
-  n=length(which(!is.na(data)))
+  X.1=X.1[which(!is.na(X.1[]))]
+  n=length(X.1)
   X.1 = data
   #X.1=X.1/100
   h0=mean(X.1)
