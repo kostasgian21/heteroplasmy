@@ -6,6 +6,7 @@
 #' the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe). NA values are omitted.
+#' @return The analytically derived standard error of the variance of \code{data}.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \url{https://en.wikipedia.org/}
 #' @seealso \code{\link{bootstrapVar}}

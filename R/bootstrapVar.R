@@ -3,7 +3,7 @@
 #' This function uses the bootrstap method to calculate the uncertainty of the variance of a
 #' given sample based on random resampling. The number of the resamples is a parameter (default
 #' is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
-#' the sigmaOpt parameter) which has been seen to improve the precision of the calculation (see
+#' the \strong{sigmaOpt} parameter) which has been seen to improve the precision of the calculation (see
 #' our report/paper). Given that the resampling methods underestimate the uncertainty and thus
 #' provide a biased estimation, we offer the the unbiased method as a default, although the user
 #' may change this option through the biased parameter for experimental purposes (they are
@@ -20,6 +20,7 @@
 #' the samples, the better the bootstrap outcome.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe). NA values are omitted.
+#' @return The standard error of the variance of \code{data}.
 #' @keywords bootstrap uncertainty heteroplasmy resampling
 #' @export
 #' @examples

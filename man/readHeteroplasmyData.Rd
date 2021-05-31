@@ -9,6 +9,9 @@ readHeteroplasmyData(nameD = "HB")
 \arguments{
 \item{nameD}{Either "HB" or "LE".}
 }
+\value{
+A dataframe containing mouse heteroplasmy data.
+}
 \description{
 This function allows you to read mouse heteroplasmy data from external files. Use with caution for now.
 }

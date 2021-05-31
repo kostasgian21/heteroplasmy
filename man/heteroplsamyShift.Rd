@@ -7,15 +7,20 @@
 heteroplsamyShift(h, h0)
 }
 \arguments{
-\item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
-the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).}
+\item{h}{The heteroplasmy observation.}
 
-\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe).}
+\item{h0}{The reference heteroplasmy value.}
+}
+\value{
+The Transformed heteroplasmy shift.
 }
 \description{
 A numerical transformation of the heteroplasmy samples in order to work with the
-heteroplasmy shifts across diverse samples (e.g., due to time or different tissue samples).
+heteroplasmy shifts across diverse samples (e.g., due to time or different tissue samples). This
+transformation is used for comparing a heteroplasmy observation \emph{h} to a reference value
+\ifelse{html}{\emph{h}\out{<sub>0</sub>}}{\eqn{h_0}}.
+It corresponds to the formula:\cr \cr
+\ifelse{html}{\eqn{\Delta}\out{h =ln((h(h<sub>0</sub> - 1))/(h<sub>0</sub>(h - 1)))}}{\deqn{\Delta h =  \ln \left( \frac{h (h_0 - 1)}{h_0 (h - 1)}\right)}}
 }
 \examples{
 # size of the sample
@@ -29,7 +34,7 @@ mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 heteroplsamyShift(mouseData1,nrep=10000)
 }
 \references{
-\url{https://en.wikipedia.org/}
+\href{http://example.com}{Site or paper}
 }
 \seealso{
 \code{\link{readHeteroplasmyData}}

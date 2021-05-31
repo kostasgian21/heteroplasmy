@@ -8,6 +8,7 @@
 #' should be strictly greater than 1.
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into
 #' a dataframe). Its size should be >=2. NA values are omitted.
+#' @return The analytically derived standard error of the variance of \code{data}.
 #' @keywords jackknife uncertainty heteroplasmy resampling
 #' @export
 #' @examples
@@ -20,6 +21,11 @@
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 #' jackVar(mouseData1)
+#' \dontrun{
+#' #input data of size 1 will fail
+#' data_ex=rnorm(1,0.5,0.1)
+#' jackVar(data)
+#' }
 
 jackVar <- function(data) {
   if (typeof(data)!="double") {

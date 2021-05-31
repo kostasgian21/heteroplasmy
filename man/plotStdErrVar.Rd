@@ -25,6 +25,11 @@ regarding the variance of the sample. The mean variance and its standard error
 are depicted. Note that this is just an illustration to show that the analytic
 and the resampling approaches almost match each other.
 }
+\section{Warning}{
+
+This is a plotting function just for demonstration purposes.
+}
+
 \examples{
 # size of the sample
 n=50
@@ -32,6 +37,4 @@ n=50
 data_ex=rnorm(n,0.5,0.1)
 plotStdErrVar(data_ex)
 }
-\keyword{error}
-\keyword{plot}
-\keyword{standard}
+\keyword{plot,standard,error}

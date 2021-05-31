@@ -14,6 +14,9 @@ a dataframe). NA values are omitted.}
 instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
 Default is FALSE.}
 }
+\value{
+The analytically derived standard error of the variance of \code{data}.
+}
 \description{
 This function calculates analytically the standard error of the variance.
 }

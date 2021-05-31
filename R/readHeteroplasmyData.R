@@ -2,6 +2,7 @@
 #'
 #' This function allows you to read mouse heteroplasmy data from external files. Use with caution for now.
 #' @param nameD Either "HB" or "LE".
+#' @return A dataframe containing mouse heteroplasmy data.
 #' @keywords heteroplasmy data
 #' @export
 #' @examples

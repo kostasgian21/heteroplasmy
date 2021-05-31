@@ -10,6 +10,9 @@ jackVar(data)
 \item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
 a dataframe). Its size should be >=2. NA values are omitted.}
 }
+\value{
+The analytically derived standard error of the variance of \code{data}.
+}
 \description{
 Similarly to the main bootstrapVar function that implements the bootstra method to measure the
 standard error of the variance, the jackknife technique is another resampling method that can
@@ -28,6 +31,11 @@ jackVar(data)
 mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 jackVar(mouseData1)
+\dontrun{
+#input data of size 1 will fail
+data_ex=rnorm(1,0.5,0.1)
+jackVar(data)
+}
 }
 \keyword{heteroplasmy}
 \keyword{jackknife}

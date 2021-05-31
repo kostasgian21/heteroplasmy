@@ -13,6 +13,9 @@ a dataframe). NA values are omitted.}
 \item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
 the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).}
 }
+\value{
+The analytically derived standard error of the variance of \code{data}.
+}
 \description{
 This function is simply the bootstrapVar with the correction argument being TRUE. it is
 provided as a seperate function for usability.
