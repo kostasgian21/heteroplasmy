@@ -3,6 +3,7 @@
 export(analyticVar)
 export(bootstrapVar)
 export(bootstrapVarCor)
+export(heteroplsamyShift)
 export(jackVar)
 export(plotStdErrVar)
 export(readHeteroplasmyData)

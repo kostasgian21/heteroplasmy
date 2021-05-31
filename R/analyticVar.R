@@ -22,17 +22,20 @@
 
 
 analyticVar <- function(data,normal=FALSE) {
-  if (typeof(data)!="double") {
-    stop("Invalid data type. Input data should be of type double")
+  if (typeof(data)!="double" || typeof(normal)!="logical") {
+    stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
   if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
     warning("There were NA values in the input data and they were ommitted.")
   }
-
+  X.1 = data
   X.1=X.1[which(!is.na(X.1[]))]
   n=length(X.1)
+  if (n<1) {
+    stop("Invalid length of input data. It should be >0.")
+  }
   X.1=as.data.frame(X.1)
-  X.1 = data
+
   #X.1=X.1/100
   h0=mean(X.1)
   sampleVar=var(X.1)

@@ -20,6 +20,9 @@
 #' plotStdErrVar(data_ex)
 
 plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","correctedBoot","jackknife"),...) {
+  if (typeof(data)!="double") {
+    stop("Invalid data type(s). Check if the arguments' types are correct.")
+  }
   functions <- list(...)
   if (length(functions)==0) {
     functions=c("normalApr","analytic","bootstrap","correctedBoot","jackknife")

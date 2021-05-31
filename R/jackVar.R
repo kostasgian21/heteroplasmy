@@ -22,9 +22,18 @@
 #' jackVar(mouseData1)
 
 jackVar <- function(data) {
+  if (typeof(data)!="double") {
+    stop("Invalid data type. Check if the arguments' types are correct.")
+  }
+  if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
+    warning("There were NA values in the input data and they were ommitted.")
+  }
+  X.1 = data
   X.1=X.1[which(!is.na(X.1[]))]
   n=length(X.1)
-  X.1 = data
+  if (n<2) {
+    stop("Invalid length of input data for jackknife. By definition, it should be >1.")
+  }
   #X.1=X.1/100
   h0=mean(X.1)
   if (n<2) {
