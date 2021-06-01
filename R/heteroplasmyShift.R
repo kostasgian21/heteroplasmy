@@ -19,13 +19,13 @@
 #' n=50
 #' #generate a random sample of size n from a normal distribution
 #' data_ex=rnorm(n,0.5,0.1)
-#' heteroplsamyShift(data)
+#' heteroplasmyShift(data)
 #'
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
-#' heteroplsamyShift(mouseData1,nrep=10000)
+#' heteroplasmyShift(mouseData1,nrep=10000)
 
-heteroplsamyShift <- function(h,h0) {
+heteroplasmyShift <- function(h,h0) {
   if (h<0 || h0<0) {
     stop("h or h0 cannot have a negative value")
   }
