@@ -1,27 +1,27 @@
-#' Prices of 50,000 round cut diamonds.
+#' HB oocyte heteroplasmy data.
 #'
-#' A dataset containing the prices and other attributes of almost 54,000
-#' diamonds.
+#' A dataset containing hetoplasmy values for the HB oocyte mouse lines.
+#' Each column corresponds to a different specimen. NA values have been
+#' added to make the number of rows equal. Please remove them after loading.
 #'
-#' @format A data frame with 53940 rows and 10 variables:
+#' @format A data frame with 25 rows and 56 columns (TO FIX):
 #' \describe{
 #'   \item{price}{price, in US dollars}
 #'   \item{carat}{weight of the diamond, in carats}
-#'   ...
 #' }
-#' @source \url{http://www.diamondse.info/}
-"HBdata"
+#' @source \url{http://www.example.info/}
+"mousedataHB"
 
-#' LEdata.
+#' LE oocyte heteroplasmy data.
 #'
-#' A dataset containing the prices and other attributes of almost 54,000
-#' diamonds.
+#' A dataset containing hetoplasmy values for the HB oocyte mouse lines.
+#' Each column corresponds to a different specimen. NA values have been
+#' added to make the number of rows equal. Please remove them after loading.
 #'
-#' @format A data frame with 53940 rows and 10 variables:
+#' @format A data frame with 20 rows and 43 columns (TO FIX):
 #' \describe{
 #'   \item{price}{price, in US dollars}
 #'   \item{carat}{weight of the diamond, in carats}
-#'   ...
 #' }
-#' @source \url{http://www.diamondse.info/}
-"LEdata"
+#' @source \url{http://www.example.info/}
+"mousedataLE"

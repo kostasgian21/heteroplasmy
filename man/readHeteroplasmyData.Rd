@@ -13,7 +13,8 @@ readHeteroplasmyData(nameD = "HB")
 A dataframe containing mouse heteroplasmy data.
 }
 \description{
-This function allows you to read mouse heteroplasmy data from external files. Use with caution for now.
+This function allows you to read mouse heteroplasmy data from external files.
+Use with caution (for now).
 }
 \examples{
 readHeteroplasmyData(nameD="LE")

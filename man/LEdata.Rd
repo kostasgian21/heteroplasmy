@@ -3,23 +3,23 @@
 \docType{data}
 \name{LEdata}
 \alias{LEdata}
-\title{LEdata.}
+\title{LE oocyte heteroplasmy data.}
 \format{
-A data frame with 53940 rows and 10 variables:
+A data frame with 817 rows and 43 columns (TO FIX):
 \describe{
 \item{price}{price, in US dollars}
 \item{carat}{weight of the diamond, in carats}
-...
 }
 }
 \source{
-\url{http://www.diamondse.info/}
+\url{http://www.example.info/}
 }
 \usage{
 LEdata
 }
 \description{
-A dataset containing the prices and other attributes of almost 54,000
-diamonds.
+A dataset containing hetoplasmy values for the HB oocyte mouse lines.
+Each column corresponds to a different specimen. NA values have been
+added to make the number of rows equal. Please remove them after loading.
 }
 \keyword{datasets}

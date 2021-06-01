@@ -1,6 +1,7 @@
 #' A Function to read mouse heteroplasmy data (not finished!)
 #'
-#' This function allows you to read mouse heteroplasmy data from external files. Use with caution for now.
+#' This function allows you to read mouse heteroplasmy data from external files.
+#' Use with caution (for now).
 #' @param nameD Either "HB" or "LE".
 #' @return A dataframe containing mouse heteroplasmy data.
 #' @keywords heteroplasmy data
@@ -16,12 +17,14 @@ readHeteroplasmyData <- function(nameD="HB") {
     mouseData=mouseData[-c(1:11),]
     mouseData=mouseData[which(mouseData[,]!=""),]
     mouseData[, ] <- sapply(mouseData[, ], as.numeric)
+    mouseData=mouseData[1:30,]
   }else if(nameD=="LE"){
     mouseData <- read.table("LE oocyte data.txt", sep="\t",header=T)
     mouseData=mouseData[,-1]
     mouseData=mouseData[-c(1:10),]
     mouseData=mouseData[which(mouseData[,]!=""),]
     mouseData[, ] <- sapply(mouseData[, ], as.numeric)
+    mouseData=mouseData[1:20,]
   }else{
     mouseData=NULL
     print("wrong input, please use HB or LE")
