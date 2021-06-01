@@ -36,7 +36,7 @@
 
 bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FALSE) {
   if (typeof(data)!="double" || typeof(biased)!="logical" || typeof(corrected)!="logical"
-      || typeof(sigmaOpt)!="logical" || typeof(nrep)!="integer") {
+      || typeof(sigmaOpt)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
   if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
