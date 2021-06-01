@@ -1,7 +1,10 @@
 #' The bootstrapVar function with default correction
 #'
 #' This function is simply the bootstrapVar with the correction argument being TRUE. it is
-#' provided as a seperate function for usability.
+#' provided as a seperate function for usability.The function can be used beyond heteroplasmy data,
+#' therefore one can use it to calculate the standard error of the variance for samples where other
+#' approaches may not fit, eg when the sample size is too small and/or the population distribution
+#' is not Gaussian (or not known at all).
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome (see \code{\link[graphics]{par}}).
 #' @param data The input data in the form of a dataframe or matrix (which will be transformed into

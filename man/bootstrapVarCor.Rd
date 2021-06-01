@@ -18,7 +18,10 @@ The analytically derived standard error of the variance of \code{data}.
 }
 \description{
 This function is simply the bootstrapVar with the correction argument being TRUE. it is
-provided as a seperate function for usability.
+provided as a seperate function for usability.The function can be used beyond heteroplasmy data,
+therefore one can use it to calculate the standard error of the variance for samples where other
+approaches may not fit, eg when the sample size is too small and/or the population distribution
+is not Gaussian (or not known at all).
 }
 \examples{
 # size of the sample
