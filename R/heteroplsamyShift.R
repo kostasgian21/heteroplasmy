@@ -26,6 +26,9 @@
 #' heteroplsamyShift(mouseData1,nrep=10000)
 
 heteroplsamyShift <- function(h,h0) {
+  if (h<0 || h0<0) {
+    stop("h or h0 cannot have a negative value")
+  }
   deltaH=log((h*(h0-1))/(h0*(h-1)))
   return(deltaH)
 }
