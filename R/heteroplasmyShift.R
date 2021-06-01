@@ -6,8 +6,9 @@
 #' \ifelse{html}{\emph{h}\out{<sub>0</sub>}}{\eqn{h_0}}.
 #' It corresponds to the formula:\cr \cr
 #' \ifelse{html}{\eqn{\Delta}\out{h =ln((h(h<sub>0</sub> - 1))/(h<sub>0</sub>(h - 1)))}}{\deqn{\Delta h =  \ln \left( \frac{h (h_0 - 1)}{h_0 (h - 1)}\right)}}
-#' @param h0 The reference heteroplasmy value.
-#' @param h The heteroplasmy observation.
+#' @param h0 The reference heteroplasmy value. Should be in [0,1].
+#' @param h The heteroplasmy observation. Can be either a single value or a vector of observations.
+#' Every observation should be in [0,1].
 #' @return The Transformed heteroplasmy shift.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \href{http://example.com}{Site or paper}
@@ -26,9 +27,19 @@
 #' heteroplasmyShift(mouseData1,nrep=10000)
 
 heteroplasmyShift <- function(h,h0) {
-  if (h<0 || h0<0) {
-    stop("h or h0 cannot have a negative value")
+  if (typeof(h)!="double" || typeof(h0)!="double") {
+    stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
-  deltaH=log((h*(h0-1))/(h0*(h-1)))
-  return(deltaH)
+  if (length(h)==1) {
+    if (h<0 || h0<0 || h>1 || h0>1) {
+      stop("h or h0 should be in [0,1]")
+    }
+    deltaH=log((h*(h0-1))/(h0*(h-1)))
+    message("Input h type: single value")
+    return(deltaH)
+  }else{
+    deltaH=log((h*(h0-1))/(h0*(h-1)))
+    print("Input h type: vector")
+    message(deltaH)
+  }
 }

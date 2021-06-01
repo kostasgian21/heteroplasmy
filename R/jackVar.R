@@ -21,6 +21,11 @@
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 #' jackVar(mouseData1)
+#'
+#' # use the package data and load it to variable mouseData
+#' mouseData=mousedataLE
+#' # calculate the standard error of the variance for the LE oocyte sample #3
+#' bootstrapVar(mouseData[,3])
 #' \dontrun{
 #' #input data of size 1 will fail
 #' data_ex=rnorm(1,0.5,0.1)

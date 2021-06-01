@@ -20,6 +20,7 @@ readHeteroplasmyData <- function(nameD="HB") {
     mouseData=mouseData[1:25,]
     rnames=seq(1,25)
     row.names(mouseData) <- rnames
+    mouseData=mouseData/100
   }else if(nameD=="LE"){
     mouseData <- read.table("LE oocyte data.txt", sep="\t",header=T)
     mouseData=mouseData[,-1]
@@ -29,9 +30,10 @@ readHeteroplasmyData <- function(nameD="HB") {
     mouseData=mouseData[1:20,]
     rnames=seq(1,20)
     row.names(mouseData) <- rnames
+    mouseData=mouseData/100
   }else{
     mouseData=NULL
-    print("wrong input, please use HB or LE")
+    stop("wrong input, please use HB or LE")
   }
   return(mouseData)
 }

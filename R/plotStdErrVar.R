@@ -29,6 +29,11 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","c
   if (length(functions)==0) {
     functions=c("normalApr","analytic","bootstrap","correctedBoot","jackknife")
   }
+
+  n=length(data)
+  if (n<2) {
+    stop("Invalid length of input data for jackknife. By definition, it should be >1.")
+  }
   sampleVar=var(data)
 
   resultMeans= data.frame(W1=numeric(),
@@ -70,6 +75,7 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","c
   names(resultMeans)[2] <- "Wonnapinij et al."
   names(resultMeans)[3] <- "corBoots"
   names(resultMeans)[4]<-"corBoots with g(x)"
+  names(resultMeans)[5]<-"jackknife"
 
   #plot the results
   for (i in 1:5){

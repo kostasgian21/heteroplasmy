@@ -3,7 +3,7 @@
 \docType{data}
 \name{mousedataLE}
 \alias{mousedataLE}
-\title{LE oocyte heteroplasmy data.}
+\title{LE oocyte heteroplasmy data}
 \format{
 A data frame with 20 rows and 43 columns (TO FIX):
 \describe{
@@ -21,5 +21,6 @@ mousedataLE
 A dataset containing hetoplasmy values for the HB oocyte mouse lines.
 Each column corresponds to a different specimen. NA values have been
 added to make the number of rows equal. Please remove them after loading.
+Heteroplasmy data of the package are in the range \link{0,1}.
 }
 \keyword{datasets}

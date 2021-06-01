@@ -7,9 +7,10 @@
 heteroplasmyShift(h, h0)
 }
 \arguments{
-\item{h}{The heteroplasmy observation.}
+\item{h}{The heteroplasmy observation. Can be either a single value or a vector of observations.
+Every observation should be in \link{0,1}.}
 
-\item{h0}{The reference heteroplasmy value.}
+\item{h0}{The reference heteroplasmy value. Should be in \link{0,1}.}
 }
 \value{
 The Transformed heteroplasmy shift.

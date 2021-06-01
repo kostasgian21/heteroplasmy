@@ -25,9 +25,14 @@
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 #' bootstrapVarCor(mouseData1,nrep=10000)
+#'
+#' # use the package data and load it to variable mouseData
+#' mouseData=mousedataLE
+#' # calculate the standard error of the variance for the LE oocyte sample #3
+#' bootstrapVar(mouseData[,3])
 
 bootstrapVarCor <- function(data,nrep=1000) {
   rep=nrep
-  heteropVar=bootstrapVar(data,nrep=rep)
+  heteropVar=bootstrapVar(data,nrep=rep,sigmaOpt=TRUE)
   return(heteropVar)
 }

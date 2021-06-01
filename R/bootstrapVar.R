@@ -33,6 +33,11 @@
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 #' bootstrapVar(mouseData1,sigmaOpt=TRUE)
+#'
+#' # use the package data and load it to variable mouseData
+#' mouseData=mousedataLE
+#' # calculate the standard error of the variance for the LE oocyte sample #3
+#' bootstrapVar(mouseData[,3])
 
 bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FALSE) {
   if (typeof(data)!="double" || typeof(biased)!="logical" || typeof(corrected)!="logical"

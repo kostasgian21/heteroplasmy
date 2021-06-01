@@ -30,6 +30,11 @@ analyticVar(data)
 mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
 analyticVar(mouseData1)
+
+# use the package data and load it to variable mouseData
+mouseData=mousedataLE
+# calculate the standard error of the variance for the LE oocyte sample #3
+bootstrapVar(mouseData[,3])
 }
 \keyword{error}
 \keyword{heteroplasmy}
