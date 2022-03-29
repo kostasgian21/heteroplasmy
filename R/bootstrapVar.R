@@ -2,17 +2,10 @@
 #'
 #' This function uses the bootrstap method to calculate the uncertainty of the variance of a
 #' given sample based on random resampling. The number of the resamples is a parameter (default
-#' is 1000) and along with the the "vanilla" version, we offer an optimized variation (using
-#' the \strong{sigmaOpt} parameter) which has been seen to improve the precision of the calculation (see
-#' our report/paper). Given that the resampling methods underestimate the uncertainty and thus
+#' is 1000). Given that the resampling methods underestimate the uncertainty and thus
 #' provide a biased estimation, we offer the the unbiased method as a default, although the user
 #' may change this option through the biased parameter for experimental purposes (they are
 #' strongly advised not to do for real problems with small samples).
-#' @param sigmaOpt The outcome of the bootstrap resampling with a fitted sigmoid function g(x)
-#' with four parameters. Derived through simulations on both real heteroplasmy data and various
-#' synthetic ones. Try the plotStdErrVar function in this package to observe it.
-#' @param corrected Simle correction with a factor of 2.61 that was experimentally found. It is
-#' included also in the case of sigmaOpt=TRUE
 #' @param biased A logical parameter to indicate if the user wants the biased version. Resampling
 #' techniques always underestimate statistics like the variance or the standard error of it
 #'  for small samples.
@@ -32,16 +25,19 @@
 #'
 #' mouseData=readHeteroplasmyData("HB")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
-#' bootstrapVar(mouseData1,sigmaOpt=TRUE)
+#' bootstrapVar(mouseData1)
 #'
 #' # use the package data and load it to variable mouseData
 #' mouseData=mousedataLE
 #' # calculate the standard error of the variance for the LE oocyte sample #3
 #' bootstrapVar(mouseData[,3])
 
-bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FALSE) {
-  if (typeof(data)!="double" || typeof(biased)!="logical" || typeof(corrected)!="logical"
-      || typeof(sigmaOpt)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
+bootstrapVar <- function(data,nrep=1000,biased=FALSE){#,corrected=FALSE,sigmaOpt=FALSE) {
+  # if (typeof(data)!="double" || typeof(biased)!="logical" || typeof(corrected)!="logical"
+  #     || typeof(sigmaOpt)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
+  #   stop("Invalid data type(s). Check if the arguments' types are correct.")
+  # }
+  if (typeof(data)!="double" || typeof(biased)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
   if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
@@ -93,16 +89,16 @@ bootstrapVar <- function(data,nrep=1000,biased=FALSE,corrected=FALSE,sigmaOpt=FA
     heteropVar=SEB
   }
 
-  if (corrected==TRUE) {
-    message("Correceted by a constant factor")
-    heteropVar=SEB*((n - opti)/n)
-  }
-  if (sigmaOpt==TRUE) {
-    message("Correceted by a fitted sigmoid function, ie a four-parameter log-logistic function")
-    # heteropVar=SEB*((n - opti)/n)/(coeC+(coeD-coeC)/(1+exp(coeB*(log(n)-log(coeE)))))
-    heteropVar=SEB*(((n - opti)*(1+exp(coeB*(log(n)-log(coeE)))))/(n*(coeC+(coeD-coeC))))
-
-  }
+  # if (corrected==TRUE) {
+  #   message("Correceted by a constant factor")
+  #   heteropVar=SEB*((n - opti)/n)
+  # }
+  # if (sigmaOpt==TRUE) {
+  #   message("Correceted by a fitted sigmoid function, ie a four-parameter log-logistic function")
+  #   # heteropVar=SEB*((n - opti)/n)/(coeC+(coeD-coeC)/(1+exp(coeB*(log(n)-log(coeE)))))
+  #   heteropVar=SEB*(((n - opti)*(1+exp(coeB*(log(n)-log(coeE)))))/(n*(coeC+(coeD-coeC))))
+  #
+  # }
 
   return(heteropVar)
 }
