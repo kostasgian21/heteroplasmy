@@ -6,9 +6,9 @@
 #' \ifelse{html}{\emph{h}\out{<sub>0</sub>}}{\eqn{h_0}}.
 #' It corresponds to the formula:\cr \cr
 #' \ifelse{html}{\eqn{\Delta}\out{h =ln((h(h<sub>0</sub> - 1))/(h<sub>0</sub>(h - 1)))}}{\deqn{\Delta h =  \ln \left( \frac{h (h_0 - 1)}{h_0 (h - 1)}\right)}}
-#' @param h0 The reference heteroplasmy value. Should be in \code{[}0,1\code{/]}.
+#' @param h0 The reference heteroplasmy value. Should be in [0,1].
 #' @param h The heteroplasmy observation. Can be either a single value or a vector of observations.
-#' Every observation should be in \[0,1\] and [[0,1]].
+#' Every observation should be in [0,1] and [[0,1]].
 #' @return The Transformed heteroplasmy shift.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \href{http://example.com}{Site or paper}
