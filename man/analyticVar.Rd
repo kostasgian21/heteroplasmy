@@ -19,6 +19,7 @@ The analytically derived standard error of the variance of \code{data}.
 }
 \description{
 This function calculates analytically the standard error of the variance.
+It's based on the use of h-statistic as an estimator
 }
 \examples{
 # size of the sample
@@ -37,6 +38,7 @@ mouseData=mousedataLE
 bootstrapVar(mouseData[,3])
 }
 \keyword{error}
+\keyword{h-statistic}
 \keyword{heteroplasmy}
 \keyword{standard}
 \keyword{variance}

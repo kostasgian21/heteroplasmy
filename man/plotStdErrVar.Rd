@@ -6,7 +6,7 @@
 \usage{
 plotStdErrVar(
   data,
-  functions = c("normalApr", "analytic", "bootstrap", "correctedBoot", "jackknife"),
+  functions = c("normalApr", "analytic", "bootstrap", "jackknife"),
   ...
 )
 }

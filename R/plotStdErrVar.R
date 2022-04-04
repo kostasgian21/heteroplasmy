@@ -21,7 +21,7 @@
 #' data_ex=rnorm(n,0.5,0.1)
 #' plotStdErrVar(data_ex)
 
-plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","correctedBoot","jackknife"),...) {
+plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","jackknife"),...) {
   if (typeof(data)!="double") {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
@@ -56,39 +56,35 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","c
   if ("bootstrap" %in% functions) {
     bootVar=bootstrapVar(data)
   }
-  if ("correctedBoot" %in% functions) {
-    bootVarOpt=bootstrapVar(data,sigmaOpt = TRUE)
-  }
 
   if ("jackknife" %in% functions) {
     jackVar=jackVar(data)
   }
   resultMeans[1,] = c(sampleVar,sampleVar,sampleVar,sampleVar,
-                      sampleVar,anvarN,anvar,bootVar,
-                      bootVarOpt,jackVar)
+                      anvarN,anvar,bootVar,
+                      jackVar)
 
   ns=c(1)
   # row.names(resultMeans) <- ns
-  cl <- c("red","forestgreen","blue","gold","brown")#rainbow(4)
+  cl <- c("red","forestgreen","blue","gold")#rainbow(4)
   # cl <- rainbow(5)
-  names(resultMeans)[1] <- "W1 normal appr"
-  names(resultMeans)[2] <- "Wonnapinij et al."
-  names(resultMeans)[3] <- "corBoots"
-  names(resultMeans)[4]<-"corBoots with g(x)"
-  names(resultMeans)[5]<-"jackknife"
+  names(resultMeans)[1] <- "Normal appr"
+  names(resultMeans)[2] <- "Analytic"
+  names(resultMeans)[3] <- "Bootstrap"
+  names(resultMeans)[4]<-"jackknife"
 
   #plot the results
-  for (i in 1:5){
+  for (i in 1:4){
     plot(y=resultMeans[,i],x=ns,ylab="Var(h)",xlab="#instance",
-         col = cl[i],type = "p",main="h from HB oocyte data",cex =1.2,
+         col = cl[i],type = "p",main="SE(var) from different methods",cex =1.2,
          # col = cl[i],type = "p",main=TeX(r'(h from HB oocyte data $\mu$)'),cex =1.2,
-         ylim = c(0,max(resultMeans[,1:5])*2))
+         ylim = c(0,max(resultMeans[,1:4])*2))
     for (k in 1:length(ns)) {
-      arrows(x0=ns[k],x1=ns[k], y0=resultMeans[k,i]-resultMeans[k,i+5], y1=resultMeans[k,i]+resultMeans[k,i+5],
+      arrows(x0=ns[k],x1=ns[k], y0=resultMeans[k,i]-resultMeans[k,i+4], y1=resultMeans[k,i]+resultMeans[k,i+4],
              col = cl[i],code=3, angle=90, length=0.1)
     }
     par(new=TRUE)
   }
-  legend("topright", legend=colnames(resultMeans[,1:5]),
+  legend("topright", legend=colnames(resultMeans[,1:4]),
          col=cl, lty=1:2, cex=0.8)#box.lty=0
 }

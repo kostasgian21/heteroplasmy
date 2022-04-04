@@ -40,6 +40,6 @@ heteroplasmyShift <- function(h,h0) {
   }else{
     deltaH=log((h*(h0-1))/(h0*(h-1)))
     print("Input h type: vector")
-    message(deltaH)
+    return(deltaH)
   }
 }
