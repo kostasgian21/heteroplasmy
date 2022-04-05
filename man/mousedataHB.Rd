@@ -21,6 +21,6 @@ mousedataHB
 A dataset containing hetoplasmy values for the HB oocyte mouse lines.
 Each column corresponds to a different specimen. NA values have been
 added to make the number of rows equal. Please remove them after loading.
-Heteroplasmy data of the package are in the range \link{0,1}.
+Heteroplasmy data of the package are in the range \code{[0,1]}.
 }
 \keyword{datasets}
