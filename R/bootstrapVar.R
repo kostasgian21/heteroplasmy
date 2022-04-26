@@ -55,11 +55,6 @@ bootstrapVar <- function(data,nrep=1000,biased=FALSE){#,corrected=FALSE,sigmaOpt
   }
   #X.1=X.1/100
   h0=mean(X.1)
-  opti = 2.61
-  coeB=-4.1434
-  coeC=-0.7387
-  coeD=1.0125
-  coeE=2.8390
 
   X.1_boot=as.data.frame(X.1)
   boots = vector()
@@ -88,17 +83,6 @@ bootstrapVar <- function(data,nrep=1000,biased=FALSE){#,corrected=FALSE,sigmaOpt
     SEB=sd(bootVarsBiased)
     heteropVar=SEB
   }
-
-  # if (corrected==TRUE) {
-  #   message("Correceted by a constant factor")
-  #   heteropVar=SEB*((n - opti)/n)
-  # }
-  # if (sigmaOpt==TRUE) {
-  #   message("Correceted by a fitted sigmoid function, ie a four-parameter log-logistic function")
-  #   # heteropVar=SEB*((n - opti)/n)/(coeC+(coeD-coeC)/(1+exp(coeB*(log(n)-log(coeE)))))
-  #   heteropVar=SEB*(((n - opti)*(1+exp(coeB*(log(n)-log(coeE)))))/(n*(coeC+(coeD-coeC))))
-  #
-  # }
 
   return(heteropVar)
 }

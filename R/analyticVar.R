@@ -1,7 +1,7 @@
 #' Analytic calculation of the standard error of the variance
 #'
 #' This function calculates analytically the standard error of the variance.
-#' It's based on the use of h-statistic as an estimator
+#' It's based on the use of the appropriate h-statistic as an estimator
 #' @param normal Parameter that indicates if the normal approximation should be used
 #' instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
 #' Default is FALSE.
@@ -51,7 +51,6 @@ analyticVar <- function(data,normal=FALSE) {
   # is the generic type
   mu2=(1/n)*sum((X.1-h0)^2)
   mu4=(1/n)*sum((X.1-h0)^4)
-  # D4=((n-1)/(n^3))*((n^2-3*n+3)*mu4+3*(2*n-3)*mu2^2)
   SEW1=sampleVar*sqrt(2/(n-1))# standard error,normal approximation
   D4=-3 * mu2^2 * (2 * n - 3) * n/((n - 1) * (n - 2) * (n - 3)) +
     (n^2 - 2 * n + 3) * mu4 * n/((n - 1) * (n - 2) * (n - 3))

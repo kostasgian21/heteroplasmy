@@ -2,7 +2,7 @@
 #'
 #' This function is used as a toy example on how to represent the data statistics
 #' regarding the variance of the sample. The mean variance and its standard error
-#' are depicted. Note that this is just an illustration to show that the analytic
+#' are depicted (XX maybe plot 2*SEM? XX). Note that this is just an illustration to show that the analytic
 #' and the resampling approaches almost match each other.
 #' @param functions Choose the subset of the functions you wish use for the calculation and
 #' subsequent plot of the standard error of the variance. You can use one or a combination
@@ -39,12 +39,10 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","j
   resultMeans= data.frame(W1=numeric(),
                           W2=numeric(),
                           Boots=numeric(),
-                          CorBoots=numeric(),
                           Jack=numeric(),
                           SEW1=numeric(),
                           SEW2=numeric(),
                           SEBoots=numeric(),
-                          SECorBoots=numeric(),
                           SEJack=numeric())
 
   if ("analytic" %in% functions) {
@@ -66,19 +64,19 @@ plotStdErrVar <- function(data,functions=c("normalApr","analytic","bootstrap","j
 
   ns=c(1)
   # row.names(resultMeans) <- ns
-  cl <- c("red","forestgreen","blue","gold")#rainbow(4)
+  cl <- c("red","lawngreen","royalblue3","gold")#rainbow(4)
   # cl <- rainbow(5)
   names(resultMeans)[1] <- "Normal appr"
   names(resultMeans)[2] <- "Analytic"
   names(resultMeans)[3] <- "Bootstrap"
-  names(resultMeans)[4]<-"jackknife"
+  names(resultMeans)[4]<-"Jackknife"
 
   #plot the results
   for (i in 1:4){
     plot(y=resultMeans[,i],x=ns,ylab="Var(h)",xlab="#instance",
          col = cl[i],type = "p",main="SE(var) from different methods",cex =1.2,
          # col = cl[i],type = "p",main=TeX(r'(h from HB oocyte data $\mu$)'),cex =1.2,
-         ylim = c(0,max(resultMeans[,1:4])*2))
+         ylim = c(0,max(resultMeans[,1:8])*2))
     for (k in 1:length(ns)) {
       arrows(x0=ns[k],x1=ns[k], y0=resultMeans[k,i]-resultMeans[k,i+4], y1=resultMeans[k,i]+resultMeans[k,i+4],
              col = cl[i],code=3, angle=90, length=0.1)

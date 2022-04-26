@@ -19,7 +19,7 @@ The analytically derived standard error of the variance of \code{data}.
 }
 \description{
 This function calculates analytically the standard error of the variance.
-It's based on the use of h-statistic as an estimator
+It's based on the use of the appropriate h-statistic as an estimator
 }
 \examples{
 # size of the sample

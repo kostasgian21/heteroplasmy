@@ -11,8 +11,11 @@ Description: The package offers different methods to quantify uncertainty by cal
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Depends: R (>= 3.1.0)
-URL: https://exmple.com
+URL: https://github.com/kostasgian21/heteroplasmy
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1.9001
+Imports: 
+    kimura,
+    stats
