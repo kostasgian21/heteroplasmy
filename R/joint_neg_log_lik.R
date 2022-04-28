@@ -4,7 +4,7 @@
 #' measurements
 #' theta = \code{[ b, h0.1, h0.2, ... ]} (use h values if use.h0s=F, otherwise initial heteroplasmies are enforced via h0s).
 #' @param h0s TBDD
-#' @param use.h0s TBDD
+#' @param use.h0s Logical parameter. TBD
 #' @param hlist TBDD list of different sets of heteroplasmy measurements
 #' @param theta Kimura parameters p (or h0 here) and b.
 #' @return The negative log likelihood  for the list of inputs.

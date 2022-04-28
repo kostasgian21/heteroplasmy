@@ -11,7 +11,7 @@ kimura_neg_loglik(theta, h, h0 = F)
 
 \item{h}{The heteroplasmy measurements.}
 
-\item{h0}{A particular h0 value  Default is to treat h0 as a fit parameter}
+\item{h0}{Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter}
 }
 \value{
 The negative log likelihood  for the input.
@@ -21,7 +21,7 @@ calculate negative log likelihood for a given set of heteroplasmy measurements
 h and parameters theta = {logit(p), logit(b)} (we write h0 for p) we can do this
 enforcing a particular h0 value (passed as an argument) or treating h0 as a fit
 parameter (default) the logit transform is used to ensure h0 and b remain in
-the \link{0,1} interval regardless of what real-valued argument the numerical optimiser
+the \code{[0,1]} interval regardless of what real-valued argument the numerical optimiser
 attempts
 }
 \examples{

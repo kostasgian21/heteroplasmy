@@ -11,7 +11,7 @@ joint_neg_log_lik(theta, hlist, use.h0s = F, h0s = -1)
 
 \item{hlist}{TBDD list of different sets of heteroplasmy measurements}
 
-\item{use.h0s}{TBDD}
+\item{use.h0s}{Logical parameter. TBD}
 
 \item{h0s}{TBDD}
 }

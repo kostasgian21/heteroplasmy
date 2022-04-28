@@ -1,4 +1,4 @@
-#' bBotstrap estimates for parameters and confidence intervals for heteroplasmy data
+#' Bootstrap estimates for parameters and confidence intervals for heteroplasmy data
 #'
 #' compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
 #' Wwe can do this while imposing a specific h0 as an argument or allowing a search over h0 values
@@ -9,7 +9,7 @@
 #' @export
 #' @examples
 #'  X.1 = rnorm(50,0.5,0.1)
-#' joint_neg_log_lik(c(0.5,0.91),X.1)
+#' maxlik(X.1,nboot=10000,0.95)
 
 maxlikboot = function(h, nboot=200, conf.level = 0.95, h0=F) {
   # if we have enforced a particular h0

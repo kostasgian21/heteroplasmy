@@ -2,7 +2,7 @@
 % Please edit documentation in R/maxlikboot.R
 \name{maxlikboot}
 \alias{maxlikboot}
-\title{bBotstrap estimates for parameters and confidence intervals for heteroplasmy data}
+\title{Bootstrap estimates for parameters and confidence intervals for heteroplasmy data}
 \usage{
 maxlikboot(h, nboot = 200, conf.level = 0.95, h0 = F)
 }
@@ -13,7 +13,7 @@ maxlikboot(h, nboot = 200, conf.level = 0.95, h0 = F)
 
 \item{conf.level}{The preferred confidence interval calculation, Default value is 0,95 (95\%).}
 
-\item{h0}{A particular h0 value  Default is to treat h0 as a fit parameter}
+\item{h0}{Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter}
 }
 \value{
 The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
@@ -24,7 +24,7 @@ Wwe can do this while imposing a specific h0 as an argument or allowing a search
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)
-joint_neg_log_lik(c(0.5,0.91),X.1)
+maxlik(X.1,nboot=10000,0.95)
 }
 \keyword{joint}
 \keyword{kimura}

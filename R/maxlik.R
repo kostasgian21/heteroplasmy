@@ -2,7 +2,7 @@
 #'
 #' compute maximum likelihood parameters and confidence intervals for a given heteroplasmy set.
 #' We can do this while imposing a specific h0 as an argument or allowing a search over h0 values.
-#' @param h0 A particular h0 value  Default is to treat h0 as a fit parameter
+#' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
 #' @param conf.level The preferred confidence interval calculation, Default value is 0,95 (95%).
 #' @param h The heteroplasmy measurements.
 #' @return The maximum likelihood for the input data according to the Kimura distribution
@@ -10,7 +10,7 @@
 #' @export
 #' @examples
 #'  X.1 = rnorm(50,0.5,0.1)
-#' joint_neg_log_lik(c(0.5,0.91),X.1)
+#' maxlik(X.1,0.95)
 
 maxlik = function(h, conf.level = 0.95, h0 = F) {
   # if we have enforced a particular h0

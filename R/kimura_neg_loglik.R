@@ -4,9 +4,9 @@
 #' h and parameters theta = {logit(p), logit(b)} (we write h0 for p) we can do this
 #' enforcing a particular h0 value (passed as an argument) or treating h0 as a fit
 #' parameter (default) the logit transform is used to ensure h0 and b remain in
-#' the [0,1] interval regardless of what real-valued argument the numerical optimiser
+#' the \code{[0,1]} interval regardless of what real-valued argument the numerical optimiser
 #' attempts
-#' @param h0 A particular h0 value  Default is to treat h0 as a fit parameter
+#' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
 #' @param h The heteroplasmy measurements.
 #' @param theta Kimura parameters p (or h0 here) and b.
 #' @return The negative log likelihood  for the input.
