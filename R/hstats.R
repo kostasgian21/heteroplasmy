@@ -29,7 +29,7 @@ hstats = function(h, h0=F, usepopn=F) {
     sehbar = 0
   }
   # standard error on the variance and confidence intervals (Wonnapinij) - - cis rely on normality assumption of course
-  sev = se.var(h, usepopn)
+  sev = analyticVar(h)
   statres$moment.h0.hat = hbar
   statres$moment.h0.ci = c( hbar-1.96*sehbar, hbar+1.96*sehbar )
 
