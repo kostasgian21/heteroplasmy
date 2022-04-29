@@ -19,3 +19,4 @@ RoxygenNote: 7.1.1.9001
 Imports: 
     kimura,
     stats
+Remotes: lbozhilova/kimura
