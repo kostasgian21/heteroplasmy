@@ -32,11 +32,7 @@
 #' # calculate the standard error of the variance for the LE oocyte sample #3
 #' bootstrapVar(mouseData[,3])
 
-bootstrapVar <- function(data,nrep=1000,biased=FALSE){#,corrected=FALSE,sigmaOpt=FALSE) {
-  # if (typeof(data)!="double" || typeof(biased)!="logical" || typeof(corrected)!="logical"
-  #     || typeof(sigmaOpt)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
-  #   stop("Invalid data type(s). Check if the arguments' types are correct.")
-  # }
+bootstrapVar <- function(data,nrep=1000,biased=FALSE){
   if (typeof(data)!="double" || typeof(biased)!="logical" || (typeof(nrep)!="integer" && typeof(nrep)!="double")) {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }

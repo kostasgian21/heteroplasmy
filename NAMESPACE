@@ -2,7 +2,6 @@
 
 export(analyticVar)
 export(bootstrapVar)
-export(bootstrapVarCor)
 export(heteroplasmyShift)
 export(hstats)
 export(jackVar)
