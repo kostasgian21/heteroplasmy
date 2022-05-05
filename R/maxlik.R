@@ -16,7 +16,7 @@ maxlik = function(h, conf.level = 0.95, h0 = F) {
   # if we have enforced a particular h0
   if(h0 != F) {
     # find best transformed parameter b
-    best = stats::optim(c(0.5), kimura_neg_loglik, h=h, h0=h0, method="Brent", lower=-30, upper=30, hessian=F)
+    best = stats::optim(c(0.5), kimura_neg_loglik, h=h, h0=h0, method="Brent", lower=-30, upper=30, hessian=T)
     # add back-transformed parameters to return structure
     # h0 is fixed here; n is straightforward function of b
     best$h0.hat = h0
@@ -36,7 +36,7 @@ maxlik = function(h, conf.level = 0.95, h0 = F) {
     best$n.ci = 1/(1-best$b.ci)
   } else {
     # find best transformed parameters h0 and b
-    best = optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=F)
+    best = stats::optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=T)
     # add back-transformed parameters to return structure
     best$b.hat = transfun(best$par[1])
     best$h0.hat = transfun(best$par[2])
