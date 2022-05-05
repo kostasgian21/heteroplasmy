@@ -22,7 +22,7 @@ We can do this while imposing a specific h0 as an argument or allowing a search 
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)
-maxlik(X.1,0.95)
+maxlik(X.1,conf.level=0.95)
 }
 \keyword{joint}
 \keyword{kimura}

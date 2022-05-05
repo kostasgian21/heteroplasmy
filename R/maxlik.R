@@ -10,13 +10,13 @@
 #' @export
 #' @examples
 #'  X.1 = rnorm(50,0.5,0.1)
-#' maxlik(X.1,0.95)
+#' maxlik(X.1,conf.level=0.95)
 
 maxlik = function(h, conf.level = 0.95, h0 = F) {
   # if we have enforced a particular h0
   if(h0 != F) {
     # find best transformed parameter b
-    best = stats::optim(c(0.5), kimura_neg_loglik, h=h, h0=h0, method="Brent", lower=-30, upper=30, hessian=T)
+    best = stats::optim(c(0.5), kimura_neg_loglik, h=h, h0=h0, method="Brent", lower=-30, upper=30, hessian=F)
     # add back-transformed parameters to return structure
     # h0 is fixed here; n is straightforward function of b
     best$h0.hat = h0
