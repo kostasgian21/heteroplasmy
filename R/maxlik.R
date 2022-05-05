@@ -36,7 +36,7 @@ maxlik = function(h, conf.level = 0.95, h0 = F) {
     best$n.ci = 1/(1-best$b.ci)
   } else {
     # find best transformed parameters h0 and b
-    best = optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=T)
+    best = optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=F)
     # add back-transformed parameters to return structure
     best$b.hat = transfun(best$par[1])
     best$h0.hat = transfun(best$par[2])
