@@ -2,8 +2,10 @@
 
 export(analyticVar)
 export(bootstrapVar)
+export(estimate_parameters_ml)
 export(heteroplasmyShift)
 export(hstats)
+export(invtransfun)
 export(jackVar)
 export(joint_neg_log_lik)
 export(kimura_lrt)

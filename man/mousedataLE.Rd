@@ -5,11 +5,7 @@
 \alias{mousedataLE}
 \title{LE oocyte heteroplasmy data}
 \format{
-A data frame with 20 rows and 43 columns (TO FIX):
-\describe{
-\item{price}{price, in US dollars}
-\item{carat}{weight of the diamond, in carats}
-}
+A data frame with 20 rows and 43 columns (TO FIX)
 }
 \source{
 \url{http://www.example.info/}
@@ -18,7 +14,7 @@ A data frame with 20 rows and 43 columns (TO FIX):
 mousedataLE
 }
 \description{
-A dataset containing hetoplasmy values for the HB oocyte mouse lines.
+A dataset containing heteroplasmy values for the HB oocyte mouse lines.
 Each column corresponds to a different specimen. NA values have been
 added to make the number of rows equal. Please remove them after loading.
 Heteroplasmy data of the package are in the range \code{[0,1]}.

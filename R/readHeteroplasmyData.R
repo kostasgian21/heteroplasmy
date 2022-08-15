@@ -2,7 +2,7 @@
 #'
 #' This function allows you to read mouse heteroplasmy data from external files.
 #' Use with caution (for now).
-#' @param nameD Either "HB" or "LE".
+#' @param nameD Either "HB" or "LE" or "Freyer".
 #' @return A dataframe containing mouse heteroplasmy data.
 #' @keywords heteroplasmy data
 #' @export
@@ -31,6 +31,9 @@ readHeteroplasmyData <- function(nameD="HB") {
     rnames=seq(1,20)
     row.names(mouseData) <- rnames
     mouseData=mouseData/100
+  }else if(nameD=="Freyer"){
+    mouseData <- read.table("freyerPGC.txt", sep = "\t",
+                            header = F)
   }else{
     mouseData=NULL
     stop("wrong input, please use HB or LE")

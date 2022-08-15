@@ -28,7 +28,7 @@ It corresponds to the formula:\cr \cr
 n=50
 #generate a random sample of size n from a normal distribution
 data_ex=rnorm(n,0.5,0.1)
-heteroplasmyShift(data)
+heteroplasmyShift(data_ex)
 
 mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]

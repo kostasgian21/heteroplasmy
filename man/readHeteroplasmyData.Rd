@@ -7,7 +7,7 @@
 readHeteroplasmyData(nameD = "HB")
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE".}
+\item{nameD}{Either "HB" or "LE" or "Freyer".}
 }
 \value{
 A dataframe containing mouse heteroplasmy data.
