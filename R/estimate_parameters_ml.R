@@ -1,9 +1,9 @@
-#' Transformed heteroplasmy shift
+#' Max likelihood estimation for Kimura distribution parameters
 #'
-#' Using maximum likelihood to estimate the parameteres of a fitted Kimura distribution to the input sample values.
-#' @param h The heteroplasmy observation verctor.
+#' Using maximum likelihood to estimate the parameters of a fitted Kimura distribution to the input sample values.
+#' @param h The heteroplasmy observation vector.
 #' Every observation should be in \code{[0,1]}.
-#' @return The maximum likelihood estimates for a fitted Kimura distribution parameteres .
+#' @return The maximum likelihood estimates for a fitted Kimura distribution parameters.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \href{http://example.com}{Site or paper}
 #' @seealso \code{\link{readHeteroplasmyData}}
@@ -18,7 +18,7 @@
 #'
 #' mouseData=readHeteroplasmyData("LE")
 #' mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
-#' estimate_parameters_ml(mouseData1,nrep=10000)
+#' estimate_parameters_ml(mouseData1)
 
 estimate_parameters_ml = function(h) {
   # find best transformed parameters h0 and b

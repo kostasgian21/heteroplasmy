@@ -1,6 +1,6 @@
 #' calculate various statistics for a heteroplasmy set h
 #'
-#' can enforce an initial h0 or leave as a free parameter. Can can use population or sample statistics
+#' can enforce an initial h0 or leave as a free parameter. Can can use population or sample statistics. analyticVar offers a simplified version of this function to compute the standard error of the variance.
 #' @param usepopn Logical parameter. Use of population or sample statistics (T and F, respectively)
 #' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
 #' @param h The heteroplasmy measurements.

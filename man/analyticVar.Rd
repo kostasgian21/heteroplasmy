@@ -4,22 +4,23 @@
 \alias{analyticVar}
 \title{Analytic calculation of the standard error of the variance}
 \usage{
-analyticVar(data, normal = FALSE)
+analyticVar(data, normal = FALSE, method = "hstatistic")
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe). NA values are omitted.}
+\item{data}{The input data in the form of a vector. NA values are omitted.}
 
 \item{normal}{Parameter that indicates if the normal approximation should be used
 instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).
 Default is FALSE.}
+
+\item{method}{What method to use for the estimation of the standard error of the variance. Accepted values are "hstatistic" (default) and "Wonnapinij".}
 }
 \value{
 The analytically derived standard error of the variance of \code{data}.
 }
 \description{
 This function calculates analytically the standard error of the variance.
-It's based on the use of the appropriate h-statistic as an estimator
+It's based on the use of the appropriate h-statistic as an estimator, as default. It is offers a corrected version of the method described in Wonnapinij et al.. If instead the Wonnapinij et al. mehod shall be used, make method="Wonnapinij".
 }
 \examples{
 # size of the sample
@@ -30,7 +31,7 @@ analyticVar(data)
 
 mouseData=readHeteroplasmyData("HB")
 mouseData1 = mouseData[which(!is.na(mouseData[,1])),1]
-analyticVar(mouseData1)
+analyticVar(mouseData1,method="hstatistic")
 
 # use the package data and load it to variable mouseData
 mouseData=mousedataLE
