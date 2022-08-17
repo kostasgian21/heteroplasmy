@@ -7,8 +7,7 @@
 test_kimura_par(h, p, b, num_MC = 1000, round = TRUE)
 }
 \arguments{
-\item{h}{The heteroplasmy observation vector.
-Every observation should be in \code{[0,1]}.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 
 \item{p}{The p parameter of the Kimura distribution. Should be in \code{[0,1]}.}
 

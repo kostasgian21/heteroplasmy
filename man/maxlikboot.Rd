@@ -4,12 +4,12 @@
 \alias{maxlikboot}
 \title{Bootstrap estimates for parameters and confidence intervals for heteroplasmy data}
 \usage{
-maxlikboot(h, nboot = 200, conf.level = 0.95, h0 = F)
+maxlikboot(h, nboot = 1000, conf.level = 0.95, h0 = F)
 }
 \arguments{
-\item{h}{The heteroplasmy measurements.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 
-\item{nboot}{The number of bootstrap samples.}
+\item{nboot}{The number of bootstrap samples. Default value is 1000}
 
 \item{conf.level}{The preferred confidence interval calculation, Default value is 0,95 (95\%).}
 

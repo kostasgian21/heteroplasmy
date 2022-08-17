@@ -9,7 +9,7 @@ kimura_neg_loglik(theta, h, h0 = F)
 \arguments{
 \item{theta}{Kimura parameters p (or h0 here) and b.}
 
-\item{h}{The heteroplasmy measurements.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 
 \item{h0}{Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter}
 }

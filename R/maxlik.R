@@ -4,7 +4,7 @@
 #' We can do this while imposing a specific h0 as an argument or allowing a search over h0 values.
 #' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
 #' @param conf.level The preferred confidence interval calculation, Default value is 0,95 (95%).
-#' @param h The heteroplasmy measurements.
+#' @param h A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.
 #' @return The maximum likelihood for the input data according to the Kimura distribution
 #' @keywords joint negative log likelihood kimura
 #' @export

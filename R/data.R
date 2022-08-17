@@ -26,7 +26,7 @@
 #' A dataset containing heteroplasmy values from mouse PGCs taken from Freyer et al.
 #' Each column corresponds to a different specimen. NA values have been
 #' added to make the number of rows equal. Please remove them after loading.
-#' Heteroplasmy data of the package are in the range \code{[0,1]}.
+#' Heteroplasmy data of the package are in the range \code{[0,1]}.(Add reference!)
 #'
 #' @format A data frame with 111 rows and 18 columns (TO FIX)
 #' @source \url{http://www.example.info/}

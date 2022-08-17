@@ -7,7 +7,7 @@
 transfun(x)
 }
 \arguments{
-\item{x}{an integer number to be transformed.}
+\item{x}{a real number to be transformed.}
 }
 \value{
 The transformed cast of the input value to the interval \code{[0,1]}.

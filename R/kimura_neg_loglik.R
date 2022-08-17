@@ -6,8 +6,7 @@
 #' parameter (default) the logit transform is used to ensure h0 and b remain in
 #' the \code{[0,1]} interval regardless of what real-valued argument the numerical optimiser
 #' attempts
-#' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
-#' @param h The heteroplasmy measurements.
+#' @inheritParams maxlik
 #' @param theta Kimura parameters p (or h0 here) and b.
 #' @return The negative log likelihood  for the input.
 #' @keywords negative log likelihood kimura

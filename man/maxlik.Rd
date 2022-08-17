@@ -7,7 +7,7 @@
 maxlik(h, conf.level = 0.95, h0 = F)
 }
 \arguments{
-\item{h}{The heteroplasmy measurements.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 
 \item{conf.level}{The preferred confidence interval calculation, Default value is 0,95 (95\%).}
 

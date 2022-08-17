@@ -1,8 +1,7 @@
 #' Max likelihood estimation for Kimura distribution parameters
 #'
 #' Using maximum likelihood to estimate the parameters of a fitted Kimura distribution to the input sample values.
-#' @param h The heteroplasmy observation vector.
-#' Every observation should be in \code{[0,1]}.
+#' @inheritParams maxlik
 #' @return The maximum likelihood estimates for a fitted Kimura distribution parameters.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \href{http://example.com}{Site or paper}

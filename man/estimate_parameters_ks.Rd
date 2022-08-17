@@ -7,8 +7,7 @@
 estimate_parameters_ks(h)
 }
 \arguments{
-\item{h}{The heteroplasmy observation vector.
-Every observation should be in \code{[0,1]}.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 }
 \value{
 The maximum likelihood estimates for a fitted Kimura distribution parameters that minimze the KS statistic of a KS test.

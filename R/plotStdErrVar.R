@@ -8,8 +8,7 @@
 #' subsequent plot of the standard error of the variance. You can use one or a combination
 #' of "normalApr", "analytic","bootstrap","correctedBoot", and "jackknife". For now,
 #' it outputs all of the aforementioned methods!
-#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe).
+#' @inheritParams analyticVar
 #' @section Warning:
 #' This is a plotting function just for demonstration purposes.
 #' @keywords plot,standard,error

@@ -6,7 +6,7 @@
 #' @param h0s TBDD
 #' @param use.h0s Logical parameter. TBD
 #' @param hlist TBDD list of different sets of heteroplasmy measurements
-#' @param theta Kimura parameters p (or h0 here) and b.
+#' @inheritParams kimura_neg_loglik
 #' @return The negative log likelihood  for the list of inputs.
 #' @keywords joint negative log likelihood kimura
 #' @export

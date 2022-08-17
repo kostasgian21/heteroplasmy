@@ -7,7 +7,7 @@
 hstats(h, h0 = F, usepopn = F)
 }
 \arguments{
-\item{h}{The heteroplasmy measurements.}
+\item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
 
 \item{h0}{Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter}
 

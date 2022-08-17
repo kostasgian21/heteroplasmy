@@ -2,7 +2,7 @@
 #'
 #' A transformation function to cast any real number onto the interval \code{[0,1]}.
 #' Equivalent to the inverse logit transform.
-#' @param x an integer number to be transformed.
+#' @param x a real number to be transformed.
 #' @return The transformed cast of the input value to the interval \code{[0,1]}.
 #' @keywords reverse logit
 #' @export

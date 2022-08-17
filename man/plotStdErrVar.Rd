@@ -11,8 +11,7 @@ plotStdErrVar(
 )
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe).}
+\item{data}{The input data in the form of a vector. NA values are omitted.}
 
 \item{functions}{Choose the subset of the functions you wish use for the calculation and
 subsequent plot of the standard error of the variance. You can use one or a combination

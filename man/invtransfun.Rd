@@ -7,7 +7,7 @@
 invtransfun(x)
 }
 \arguments{
-\item{x}{an integer number to be transformed.}
+\item{x}{a real number in \code{[0,1]} to be transformed into a real.}
 }
 \value{
 The inveresed treansformation of transfun.

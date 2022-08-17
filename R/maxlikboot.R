@@ -2,7 +2,7 @@
 #'
 #' compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
 #' Wwe can do this while imposing a specific h0 as an argument or allowing a search over h0 values
-#' @param nboot The number of bootstrap samples.
+#' @param nboot The number of bootstrap samples. Default value is 1000
 #' @inheritParams maxlik
 #' @return The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
 #' @keywords joint negative log likelihood kimura
@@ -11,7 +11,7 @@
 #'  X.1 = rnorm(50,0.5,0.1)
 #' maxlik(X.1,nboot=10000,0.95)
 
-maxlikboot = function(h, nboot=200, conf.level = 0.95, h0=F) {
+maxlikboot = function(h, nboot=1000, conf.level = 0.95, h0=F) {
   # if we have enforced a particular h0
   if(h0 != F) {
     boot.b = c()
