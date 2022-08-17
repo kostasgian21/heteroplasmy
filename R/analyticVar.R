@@ -32,8 +32,8 @@ analyticVar <- function(data,normal=FALSE,method="hstatistic") {
   if (typeof(data)!="double" || typeof(normal)!="logical") {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
-  if (method!="hstatistic" || method!="Wonnapinij") {
-    stop("Invalid method. Please choose either 'hstatistic' (default value if empty) or 'Wonnapinij'.")
+  if (method!="hstatistic" && method!="Wonnapinij") {
+    warning("Invalid method. Please choose either 'hstatistic' (default value if empty) or 'Wonnapinij'. Otherwise default is used.")
   }
   if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
     warning("There were NA values in the input data and they were ommitted.")

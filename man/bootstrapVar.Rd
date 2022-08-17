@@ -7,8 +7,7 @@
 bootstrapVar(data, nrep = 1000, biased = FALSE)
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe). NA values are omitted.}
+\item{data}{The input data in the form of a vector. NA values are omitted.}
 
 \item{nrep}{The number of bootstrap resamples. Default is 1000. The higher the number of
 the samples, the better the bootstrap outcome.}

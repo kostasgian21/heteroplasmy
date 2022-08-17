@@ -11,8 +11,7 @@
 #'  for small samples.
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome.
-#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe). NA values are omitted.
+#' @inheritParams analyticVar
 #' @return The standard error of the variance of \code{data}.
 #' @keywords bootstrap uncertainty heteroplasmy resampling
 #' @export

@@ -1,8 +1,7 @@
 #' Max likelihood estimation of Kimura parameters that minimize the KS statistic
 #'
 #' Using maximum likelihood to estimate the parameters of a fitted Kimura distribution to the input sample values that minimizes the KS statistic. Used to showcase thath the use of KS statistic to prove selection needs caution.
-#' @param h The heteroplasmy observation vector.
-#' Every observation should be in \code{[0,1]}.
+#' @inheritParams estimate_parameters_ml
 #' @return The maximum likelihood estimates for a fitted Kimura distribution parameters that minimze the KS statistic of a KS test.
 #' @author Kostas and Iain, \email{us@@example.com}
 #' @references \href{http://example.com}{Site or paper}
