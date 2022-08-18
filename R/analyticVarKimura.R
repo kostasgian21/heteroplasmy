@@ -26,7 +26,7 @@
 
 
 analyticVarKimura <- function(data,p,b) {
-  if (typeof(data)!="double" || typeof(normal)!="logical") {
+  if (typeof(data)!="double") {
     stop("Invalid data type(s). Check if the arguments' types are correct.")
   }
   if (length(data[which(is.na(data[]))])>length(data[which(!is.na(data[]))])) {
