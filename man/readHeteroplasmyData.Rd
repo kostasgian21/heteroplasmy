@@ -7,17 +7,26 @@
 readHeteroplasmyData(nameD = "HB")
 }
 \arguments{
-\item{nameD}{Either "HB" or "LE" or "Freyer".}
+\item{nameD}{Either "HB" or "LE" or "Freyer" or "Broz".}
 }
 \value{
 A dataframe containing mouse heteroplasmy data.
 }
 \description{
 This function allows you to read mouse heteroplasmy data from external files.
-Use with caution (for now).
+Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, mousedataHB,mousedataLE,mousedataFreyer).
 }
 \examples{
-readHeteroplasmyData(nameD="LE")
+df1=readHeteroplasmyData(nameD="LE")
+df2=readHeteroplasmyData(nameD="HB")
+df3=readHeteroplasmyData(nameD="Freyer")
+df4=readHeteroplasmyData(nameD="Broz")
+
+# or equivalent
+df1=mousedataLE
+df2=mousedataHB
+df3=mousedataFreyer
+df4=mousedataBroz
 }
 \keyword{data}
 \keyword{heteroplasmy}

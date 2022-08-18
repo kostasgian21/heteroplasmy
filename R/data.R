@@ -31,3 +31,11 @@
 #' @format A data frame with 111 rows and 18 columns (TO FIX)
 #' @source \url{http://www.example.info/}
 "mousedataFreyer"
+
+#' 3 organellar heteroplasmy samples
+#'
+#' 3 distinct organellar heteroplasmy samples from Broz et al. (2022). Heteroplasmy data of the package are in the range \code{[0,1]}.(Add reference!)
+#'
+#' @format A data frame with 32 rows and 3 columns (TO FIX)
+#' @source \url{http://www.example.info/}
+"mousedataBroz"

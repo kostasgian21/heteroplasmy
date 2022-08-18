@@ -1,13 +1,22 @@
 #' A Function to read mouse heteroplasmy data (not finished!)
 #'
 #' This function allows you to read mouse heteroplasmy data from external files.
-#' Use with caution (for now).
-#' @param nameD Either "HB" or "LE" or "Freyer".
+#' Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, mousedataHB,mousedataLE,mousedataFreyer).
+#' @param nameD Either "HB" or "LE" or "Freyer" or "Broz".
 #' @return A dataframe containing mouse heteroplasmy data.
 #' @keywords heteroplasmy data
 #' @export
 #' @examples
-#' readHeteroplasmyData(nameD="LE")
+#' df1=readHeteroplasmyData(nameD="LE")
+#' df2=readHeteroplasmyData(nameD="HB")
+#' df3=readHeteroplasmyData(nameD="Freyer")
+#' df4=readHeteroplasmyData(nameD="Broz")
+#'
+#' # or equivalent
+#' df1=mousedataLE
+#' df2=mousedataHB
+#' df3=mousedataFreyer
+#' df4=mousedataBroz
 
 readHeteroplasmyData <- function(nameD="HB") {
   # return a new vector containing the mouse data
@@ -34,6 +43,9 @@ readHeteroplasmyData <- function(nameD="HB") {
   }else if(nameD=="Freyer"){
     mouseData <- read.table("freyerPGC.txt", sep = "\t",
                             header = F)
+  }else if(nameD=="Broz"){
+    mouseData <- read.table("orgDatBroz.txt", sep = "\t",
+                            header = T)
   }else{
     mouseData=NULL
     stop("wrong input, please use HB or LE")
