@@ -19,7 +19,7 @@ Default is FALSE.}
 The analytically derived standard error of the variance of \code{data}.
 }
 \description{
-This function calculates analytically the standard error of the variance.
+This model-free method to calculate analytically the standard error of the variance.
 It's based on the use of the appropriate h-statistic as an estimator, as default. It is offers a corrected version of the method described in Wonnapinij et al.. If instead the Wonnapinij et al. mehod shall be used, make method="Wonnapinij".
 }
 \examples{
