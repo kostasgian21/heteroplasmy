@@ -7,17 +7,16 @@
 jackVar(data)
 }
 \arguments{
-\item{data}{The input data in the form of a dataframe or matrix (which will be transformed into
-a dataframe). Its size should be >=2. NA values are omitted.}
+\item{data}{The input data in the form of a vector. NA values are omitted.}
 }
 \value{
-The analytically derived standard error of the variance of \code{data}.
+The analytically derived standard error of the variance of \code{data}  and the mean of the bootsrap samples means..
 }
 \description{
 Similarly to the main bootstrapVar function that implements the bootstra method to measure the
 standard error of the variance, the jackknife technique is another resampling method that can
 be used for the same purpose. Unlike bootstrapVar, jackVar (and very jackknife method) is deterministic
-and doesn not rely on randomness, but instead it uses removals of the sample points, one each
+and does not rely on randomness, but instead it uses removals of the sample points, one each
 time to calculate different sub-samples of size (n-1). Note that the size of the input data
 should be strictly greater than 1.
 }

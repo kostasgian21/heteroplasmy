@@ -17,7 +17,7 @@ techniques always underestimate statistics like the variance or the standard err
 for small samples.}
 }
 \value{
-The standard error of the variance of \code{data}.
+The standard error of the variance of \code{data} and the mean of the bootsrap samples means.
 }
 \description{
 This function uses the bootrstap method to calculate the uncertainty of the variance of a

@@ -3,12 +3,11 @@
 #' Similarly to the main bootstrapVar function that implements the bootstra method to measure the
 #' standard error of the variance, the jackknife technique is another resampling method that can
 #' be used for the same purpose. Unlike bootstrapVar, jackVar (and very jackknife method) is deterministic
-#' and doesn not rely on randomness, but instead it uses removals of the sample points, one each
+#' and does not rely on randomness, but instead it uses removals of the sample points, one each
 #' time to calculate different sub-samples of size (n-1). Note that the size of the input data
 #' should be strictly greater than 1.
-#' @param data The input data in the form of a dataframe or matrix (which will be transformed into
-#' a dataframe). Its size should be >=2. NA values are omitted.
-#' @return The analytically derived standard error of the variance of \code{data}.
+#' @inheritParams analyticVar
+#' @return The analytically derived standard error of the variance of \code{data}  and the mean of the bootsrap samples means..
 #' @keywords jackknife uncertainty heteroplasmy resampling
 #' @export
 #' @examples
@@ -54,10 +53,13 @@ jackVar <- function(data) {
 
   # jackknife resampling -- pseudo reports the vars of each subsample
   # and pseudoSE is for the calculation of its standard error
-  pseudo <- numeric(length(X.1))
+  pseudoV <- numeric(length(X.1))
+  pseudoM <- numeric(length(X.1))
   for (ww in 1:length(X.1)) {
-    pseudo[ww] <- var(X.1[-ww])
+    pseudoV[ww] <- var(X.1[-ww])
+    pseudoM[ww] <- mean(X.1[-ww])
   }
-  pseudoSE <- sqrt(((n - 1)/n) * sum((pseudo - mean(pseudo))^2))
-  return(pseudoSE)
+  pseudoSE <- sqrt(((n - 1)/n) * sum((pseudoV - mean(pseudoV))^2))
+  meanJack=mean(pseudoM)
+  return(c(pseudoSE, meanJack))
 }

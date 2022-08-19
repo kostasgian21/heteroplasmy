@@ -12,7 +12,7 @@
 #' @param nrep The number of bootstrap resamples. Default is 1000. The higher the number of
 #' the samples, the better the bootstrap outcome.
 #' @inheritParams analyticVar
-#' @return The standard error of the variance of \code{data}.
+#' @return The standard error of the variance of \code{data} and the mean of the bootsrap samples means.
 #' @keywords bootstrap uncertainty heteroplasmy resampling
 #' @export
 #' @examples
@@ -73,11 +73,13 @@ bootstrapVar <- function(data,nrep=1000,biased=FALSE){
   # standard error of the bootstrap samples
   SEB=sd(bootVars)
   heteropVar=SEB
+  meanBoots=mean(bootVars)
   if (biased==TRUE) {
     warning("Cautious, biased calculation always underestimates the variance!")
     SEB=sd(bootVarsBiased)
     heteropVar=SEB
+    meanBoots=mean(bootVarsBiased)
   }
 
-  return(heteropVar)
+  return(c(heteropVar, meanBoots))
 }
