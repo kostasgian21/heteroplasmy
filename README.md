@@ -4,11 +4,11 @@
 
 To install the `heteroplasmy` package you will need the `devtools` R library. If you have this, you can ignore the first line below.
 
-`install.packages("devtools")
-
- library("devtools")
- 
-  devtools::install_github("kostasgian21/heteroplasmy")`
+```
+install.packages("devtools")
+library("devtools")
+devtools::install_github("kostasgian21/heteroplasmy")`
+```
 
 You can then load the `heteroplasmy` package with
 
