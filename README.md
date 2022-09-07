@@ -16,3 +16,22 @@ You can then load the `heteroplasmy` package with
 
 The documentation is currently incomplete but we are working on it; please contact us if you have any questions!
 
+Test case
+------
+
+Here is a simple test case demonstrating an issue with using moments to fit the Kimura distribution:
+
+```
+library(kimura)
+library(heteroplasmy)
+
+# synthetic data
+h = rep(c(0, 0.9), 4)
+# fit Kimura distribution using moments and perform Monte Carlo Kolmogorov-Smirnov test (p < 0.05)
+test_kimura(h, num_MC = 10000)
+
+# fit distribution by minimising KS distance
+ks.fit = estimate_parameters_ks(h)
+# perform test using these parameters (p >> 0.05)
+test_kimura_param(h, ks.fit[1], ks.fit[2], num_MC = 10000)
+```
