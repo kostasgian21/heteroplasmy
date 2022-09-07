@@ -33,5 +33,5 @@ test_kimura(h, num_MC = 10000)
 # fit distribution by minimising KS distance
 ks.fit = estimate_parameters_ks(h)
 # perform test using these parameters (p >> 0.05)
-test_kimura_param(h, ks.fit[1], ks.fit[2], num_MC = 10000)
+test_kimura_par(h, ks.fit[1], ks.fit[2], num_MC = 10000)
 ```
