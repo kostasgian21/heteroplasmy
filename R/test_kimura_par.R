@@ -18,8 +18,8 @@
 #'   b=fit[2]
 #' test_kimura_par(data_ex,p,b)
 test_kimura_par <- function(h, p, b, num_MC = 1000, round = TRUE) {
-  cdf_kimura <- .pkimura_full(p, b)
-  h_mat <- cbind(h, matrix(rkimura(num_MC * length(h), p, b), ncol = num_MC))
+  cdf_kimura <- kimura::.pkimura_full(p, b)
+  h_mat <- cbind(h, matrix(kimura::rkimura(num_MC * length(h), p, b), ncol = num_MC))
   if (round)
     h_mat <- round(h_mat, 2)
   get_ks_statistic <- function(h) {
