@@ -34,4 +34,9 @@ test_kimura(h, num_MC = 10000)
 ks.fit = estimate_parameters_ks(h)
 # perform test using these parameters (p >> 0.05)
 test_kimura_par(h, ks.fit[1], ks.fit[2], num_MC = 10000)
+
+# fit distribution via maximum likelihood instead
+# [1] 0.3044296 0.3364191
+# (i.e. p = 0.304, b = 0.336)
+estimate_parameters_ml(h)
 ```
