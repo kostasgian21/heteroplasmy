@@ -4,7 +4,7 @@
 \alias{test_kimura_par}
 \title{Generalised MC KS test for genetic drift}
 \usage{
-test_kimura_par(h, p, b, num_MC = 1000, round = TRUE)
+test_kimura_par(h, p, b, num_MC = 1000, round = FALSE)
 }
 \arguments{
 \item{h}{A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.}
@@ -15,7 +15,7 @@ test_kimura_par(h, p, b, num_MC = 1000, round = TRUE)
 
 \item{num_MC}{number of Monte Carlo runs}
 
-\item{round}{a logical argument. True if heteroplasmy fractions are rounded to two significant digits.}
+\item{round}{a logical argument. True if heteroplasmy fractions are rounded to two significant digits. Be cautious as rounding can impact the calculated p-values. Default value is FALSE}
 }
 \value{
 object of class htest
