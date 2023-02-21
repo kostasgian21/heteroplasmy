@@ -10,7 +10,7 @@ library("devtools")
 devtools::install_github("kostasgian21/heteroplasmy")
 ```
 
-If for face problems with using devtools to isnstall libraries from github, you can do it directly by using the remotes library.
+If you face problems with using devtools to isnstall libraries from github, you can do it directly by using the remotes library.
 
 ```
 # install.packages("remotes")
