@@ -10,7 +10,6 @@
 #'
 #' @return object of class htest
 #' @export
-#’ @importFrom kimura
 #' @examples
 #' data_ex=rnorm(n,0.5,0.1)
 #'   fit = estimate_parameters_ml(data_ex)

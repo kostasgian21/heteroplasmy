@@ -8,7 +8,6 @@
 #' @seealso \code{\link{readHeteroplasmyData}}
 #' @keywords heteroplasmy,maximum likelihood
 #' @export
-#’ @importFrom kimura
 #' @examples
 #' # size of the sample
 #' n=50
