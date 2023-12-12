@@ -21,7 +21,7 @@ kimura_lrt(h1, h2, use.h0s = F, h1.h0set = 0, h2.h0set = 0)
 The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
 }
 \description{
-A function to perform likelihood ratio test exploring difference in bottleneck size between two heteroplasmy samples
+A function to perform likelihood ratio test exploring difference in bottleneck size between two heteroplasmy samples.
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)

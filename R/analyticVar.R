@@ -1,7 +1,7 @@
 #' Analytic calculation of the standard error of the variance
 #'
 #' This model-free method to calculate analytically the standard error of the variance.
-#' It's based on the use of the appropriate h-statistic as an estimator, as default. It is offers a corrected version of the method described in Wonnapinij et al.. If instead the Wonnapinij et al. mehod shall be used, make method="Wonnapinij".
+#' It's based on the use of the appropriate h-statistic as an estimator, as default. It is offers a corrected version of the method described in \emph{Wonnapinij et al.}. If instead the \emph{Wonnapinij et al.} method shall be used, use \emph{method="Wonnapinij"}.
 #' @param method What method to use for the estimation of the standard error of the variance. Accepted values are "hstatistic" (default) and "Wonnapinij".
 #' @param normal Parameter that indicates if the normal approximation should be used
 #' instead of the general formula from (Wilks, S. S. (1962).Mathematical Statistics).

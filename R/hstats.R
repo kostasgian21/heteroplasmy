@@ -1,6 +1,6 @@
-#' calculate various statistics for a heteroplasmy set h
+#' Calculate various statistics for a heteroplasmy set h
 #'
-#' can enforce an initial h0 or leave as a free parameter. Can can use population or sample statistics. analyticVar offers a simplified version of this function to compute the standard error of the variance.
+#' Can enforce an initial \emph{h0} or leave as a free parameter. Can can use population or sample statistics. \emph{analyticVar} offers a simplified version of this function to compute the standard error of the variance.
 #' @param usepopn Logical parameter. Use of population or sample statistics (T and F, respectively)
 #' @inheritParams maxlik
 #' @return The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)

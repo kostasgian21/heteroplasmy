@@ -2,7 +2,7 @@
 % Please edit documentation in R/maxlik.R
 \name{maxlik}
 \alias{maxlik}
-\title{compute maximum likelihood parameters and confidence intervals for heteroplasmy data}
+\title{Compute maximum likelihood parameters and confidence intervals for heteroplasmy data}
 \usage{
 maxlik(h, conf.level = 0.95, h0 = F)
 }
@@ -17,8 +17,8 @@ maxlik(h, conf.level = 0.95, h0 = F)
 The maximum likelihood for the input data according to the Kimura distribution
 }
 \description{
-compute maximum likelihood parameters and confidence intervals for a given heteroplasmy set.
-We can do this while imposing a specific h0 as an argument or allowing a search over h0 values.
+Compute maximum likelihood parameters and confidence intervals for a given heteroplasmy set.
+We can do this while imposing a specific \emph{h0} as an argument or allowing a search over \emph{h0} values.
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)

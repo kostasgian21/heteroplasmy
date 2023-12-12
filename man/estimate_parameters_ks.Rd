@@ -13,7 +13,7 @@ estimate_parameters_ks(h)
 The maximum likelihood estimates for a fitted Kimura distribution parameters that minimze the KS statistic of a KS test.
 }
 \description{
-Using maximum likelihood to estimate the parameters of a fitted Kimura distribution to the input sample values that minimizes the KS statistic. Used to showcase thath the use of KS statistic to prove selection needs caution.
+Using maximum likelihood to estimate the parameters of a fitted Kimura distribution to the input sample values that minimizes the KS statistic. It is used to showcase that using the KS statistic to support selection needs extra caution.
 }
 \examples{
 # size of the sample

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kimura_neg_loglik.R
 \name{kimura_neg_loglik}
 \alias{kimura_neg_loglik}
-\title{Calculate negative log likelihood for heteroplasmy measurements}
+\title{Calculate negative log-likelihood for heteroplasmy measurements}
 \usage{
 kimura_neg_loglik(theta, h, h0 = F)
 }
@@ -17,12 +17,12 @@ kimura_neg_loglik(theta, h, h0 = F)
 The negative log likelihood  for the input.
 }
 \description{
-calculate negative log likelihood for a given set of heteroplasmy measurements
-h and parameters theta = {logit(p), logit(b)} (we write h0 for p) we can do this
-enforcing a particular h0 value (passed as an argument) or treating h0 as a fit
-parameter (default) the logit transform is used to ensure h0 and b remain in
+Calculate negative log-likelihood for a given set of heteroplasmy measurements
+\emph{h} and parameters theta = {logit(p), logit(b)} (we write \emph{h0} for \emph{p}). We can do this by
+enforcing a particular \emph{h0} value (passed as an argument) or treating \emph{h0} as a fit
+parameter (default). The logit transform is used to ensure \emph{h0} and \emph{b} remain in
 the \code{[0,1]} interval regardless of what real-valued argument the numerical optimiser
-attempts
+attempts.
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)

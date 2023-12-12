@@ -15,7 +15,7 @@ ks_dist(theta, ecdf)
 The maximum distance from the theoretical Kimura distribution.
 }
 \description{
-A function to calculate the Kolmogorov-Smirnov distance. It is used in estimate_parameters_ks to estimate the parameter that minimize the distance in the optim function.
+A function to calculate the Kolmogorov-Smirnov distance. It is used in estimate_parameters_ks to estimate the parameter that minimize the distance in the \emph{optim} function from the \emph{stats} library.
 }
 \examples{
 h=rnorm(20,0.5,0.1)

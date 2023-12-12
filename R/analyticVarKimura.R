@@ -1,7 +1,7 @@
 #' Kimura-based calculation of the standard error of the variance
 #'
-#' A Kimura-distribution-based method calculates analytically the standard error of the variance (see Eq. 11 in Wonnapinij et al., 2010).
-#' It'uses only the Kimura distribution parameters p and b (passed as arguments).
+#' A Kimura-distribution-based method that calculates analytically the standard error of the variance (see Eq. 11 in \emph{Wonnapinij et al., 2010}).
+#' It uses only the Kimura distribution parameters \emph{p} and \emph{b} (passed as arguments).
 #' @inheritParams analyticVar
 #' @inheritParams test_kimura_par
 #' @return The analytically derived standard error of the variance of \code{data}.

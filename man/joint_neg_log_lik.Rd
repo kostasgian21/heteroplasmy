@@ -2,7 +2,7 @@
 % Please edit documentation in R/joint_neg_log_lik.R
 \name{joint_neg_log_lik}
 \alias{joint_neg_log_lik}
-\title{Joint negative log likelihood function for several heteroplasmy measurements}
+\title{Joint negative log-likelihood function for several heteroplasmy measurements}
 \usage{
 joint_neg_log_lik(theta, hlist, use.h0s = F, h0s = -1)
 }
@@ -19,8 +19,8 @@ joint_neg_log_lik(theta, hlist, use.h0s = F, h0s = -1)
 The negative log likelihood  for the list of inputs.
 }
 \description{
-joint negative log likelihood function for several families' heteroplasmy
-measurements
+Joint negative log-likelihood function for several families' heteroplasmy
+measurements.
 theta = \code{[ b, h0.1, h0.2, ... ]} (use h values if use.h0s=F, otherwise initial heteroplasmies are enforced via h0s).
 }
 \examples{

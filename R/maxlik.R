@@ -1,7 +1,7 @@
-#' compute maximum likelihood parameters and confidence intervals for heteroplasmy data
+#' Compute maximum likelihood parameters and confidence intervals for heteroplasmy data
 #'
-#' compute maximum likelihood parameters and confidence intervals for a given heteroplasmy set.
-#' We can do this while imposing a specific h0 as an argument or allowing a search over h0 values.
+#' Compute maximum likelihood parameters and confidence intervals for a given heteroplasmy set.
+#' We can do this while imposing a specific \emph{h0} as an argument or allowing a search over \emph{h0} values.
 #' @param h0 Logical parameter. A particular h0 value  Default is to treat h0 as a fit parameter
 #' @param conf.level The preferred confidence interval calculation, Default value is 0,95 (95%).
 #' @param h A vector containig heteroplasmy measurements. Every observation should be in \code{[0,1]}.

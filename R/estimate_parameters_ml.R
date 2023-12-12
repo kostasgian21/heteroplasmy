@@ -21,7 +21,7 @@
 
 estimate_parameters_ml = function(h) {
   # find best transformed parameters h0 and b
-  best = optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=F)
+  best = stats::optim(c(0.5, 0.5), kimura_neg_loglik, h=h, h0=F, hessian=F)
 
   best$b.hat = transfun(best$par[1])
   best$h0.hat = transfun(best$par[2])

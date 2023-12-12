@@ -1,7 +1,7 @@
 #' Bootstrap estimates for parameters and confidence intervals for heteroplasmy data
 #'
-#' compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
-#' Wwe can do this while imposing a specific h0 as an argument or allowing a search over h0 values
+#' Compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
+#' We can do this while imposing a specific \emph{h0} as an argument or by allowing a search over \emph{h0} values.
 #' @param nboot The number of bootstrap samples. Default value is 1000
 #' @inheritParams maxlik
 #' @return The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
@@ -20,7 +20,7 @@ maxlikboot = function(h, nboot=1000, conf.level = 0.95, h0=F) {
       # construct bootstrap sample
       hboot = sample(h, replace=T)
       # find best transformed parameter b
-      boot.best = optim(c(0.5), kimura_neg_loglik, h=hboot, h0=h0, method="Brent", lower=-30, upper=30)
+      boot.best = stats::optim(c(0.5), kimura_neg_loglik, h=hboot, h0=h0, method="Brent", lower=-30, upper=30)
       # record back-transformed parameter for this resample
       boot.b = c(boot.b, transfun(boot.best$par[1]))
     }
@@ -35,7 +35,7 @@ maxlikboot = function(h, nboot=1000, conf.level = 0.95, h0=F) {
     best$h0.ci = c(h0,h0)
     conf.1 = (1-conf.level)/2
     conf.2 = 1-conf.1
-    best$b.ci = c(quantile(boot.b, conf.1), quantile(boot.b, conf.2))
+    best$b.ci = c(stats::quantile(boot.b, conf.1), stats::quantile(boot.b, conf.2))
 
     best$n.bhat = 1/(1-best$b.bhat)
     best$n.ci = 1/(1-best$b.ci)
@@ -45,13 +45,13 @@ maxlikboot = function(h, nboot=1000, conf.level = 0.95, h0=F) {
     for(boot in 1:nboot) {
       hboot = sample(h, replace=T)
       # find best transformed parameters h0 and b
-      boot.best = optim(c(0.5, 0.5), kimura_neg_loglik, h=hboot, h0=F)
+      boot.best = stats::optim(c(0.5, 0.5), kimura_neg_loglik, h=hboot, h0=F)
       # record back-transformed parameters for this resample
       boot.h0 = c(boot.h0, transfun(boot.best$par[2]))
       boot.b = c(boot.b, transfun(boot.best$par[1]))
     }
     # do the optimisation for the non-resampled set
-    best = optim(c(0.5, 0.5), kimura_neg_loglik, h=h)
+    best = stats::optim(c(0.5, 0.5), kimura_neg_loglik, h=h)
     best$h0.hat = transfun(best$par[2])
     best$b.hat = transfun(best$par[1])
     best$n.hat = 1/(1-best$b.hat)

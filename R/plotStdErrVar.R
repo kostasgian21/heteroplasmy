@@ -2,7 +2,7 @@
 #'
 #' This function is used as a toy example on how to represent the data statistics
 #' regarding the variance of the sample. The mean variance and its standard error
-#' are depicted (XX maybe plot 2*SEM? XX). Note that this is just an illustration to show that the analytic
+#' are depicted. Note that this is just an illustration to show that the analytic
 #' and the resampling approaches almost match each other.
 #' @param functions Choose the subset of the functions you wish use for the calculation and
 #' subsequent plot of the standard error of the variance. You can use one or a combination

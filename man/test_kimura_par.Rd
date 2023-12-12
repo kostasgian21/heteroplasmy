@@ -21,7 +21,7 @@ test_kimura_par(h, p, b, num_MC = 1000, round = FALSE)
 object of class htest
 }
 \description{
-This function is a generalisation of the test_kimura function from the lbozhilova/kimura package. It corresponds to a Monte Carlo Kolmogorov-Smirnov test to detect genetic drift by examining deviation from a Kimura distribution. (add references)
+This function is a generalisation of the \emph{test_kimura} function from the \emph{lbozhilova/kimura} package. It corresponds to a Monte Carlo Kolmogorov-Smirnov test to detect genetic drift by examining deviation from a Kimura distribution.
 }
 \examples{
 data_ex=rnorm(n,0.5,0.1)

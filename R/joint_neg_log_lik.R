@@ -1,7 +1,7 @@
-#' Joint negative log likelihood function for several heteroplasmy measurements
+#' Joint negative log-likelihood function for several heteroplasmy measurements
 #'
-#' joint negative log likelihood function for several families' heteroplasmy
-#' measurements
+#' Joint negative log-likelihood function for several families' heteroplasmy
+#' measurements.
 #' theta = \code{[ b, h0.1, h0.2, ... ]} (use h values if use.h0s=F, otherwise initial heteroplasmies are enforced via h0s).
 #' @param h0s TBDD
 #' @param use.h0s Logical parameter. TBD

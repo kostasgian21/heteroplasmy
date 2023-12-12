@@ -1,6 +1,6 @@
 #' The inverse function to transfun
 #'
-#' A transformation function to inveret the effect of transfun (ie, the inverse logit transform).
+#' A transformation function to inveret the effect of \emph{transfun} (ie, the inverse logit transform).
 #' @param x a real number in \code{[0,1]} to be transformed into a real.
 #' @return The inveresed treansformation of transfun.
 #' @keywords inverse logit

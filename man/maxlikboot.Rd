@@ -19,8 +19,8 @@ maxlikboot(h, nboot = 1000, conf.level = 0.95, h0 = F)
 The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
 }
 \description{
-compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
-Wwe can do this while imposing a specific h0 as an argument or allowing a search over h0 values
+Compute bootstrap estimates for parameters and confidence intervals for a given heteroplasmy set
+We can do this while imposing a specific \emph{h0} as an argument or by allowing a search over \emph{h0} values.
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)

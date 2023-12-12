@@ -14,7 +14,7 @@ A dataframe containing mouse heteroplasmy data.
 }
 \description{
 This function allows you to read mouse heteroplasmy data from external files.
-Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, mousedataHB,mousedataLE,mousedataFreyer).
+Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, \emph{mousedataHB},\emph{mousedataLE},\emph{mousedataFreyer}).
 }
 \examples{
 df1=readHeteroplasmyData(nameD="LE")

@@ -13,7 +13,7 @@ invtransfun(x)
 The inveresed treansformation of transfun.
 }
 \description{
-A transformation function to inveret the effect of transfun (ie, the inverse logit transform).
+A transformation function to inveret the effect of \emph{transfun} (ie, the inverse logit transform).
 }
 \examples{
 invtransfun(0.71)

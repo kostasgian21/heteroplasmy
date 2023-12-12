@@ -2,7 +2,7 @@
 % Please edit documentation in R/hstats.R
 \name{hstats}
 \alias{hstats}
-\title{calculate various statistics for a heteroplasmy set h}
+\title{Calculate various statistics for a heteroplasmy set h}
 \usage{
 hstats(h, h0 = F, usepopn = F)
 }
@@ -17,7 +17,7 @@ hstats(h, h0 = F, usepopn = F)
 The maximum likelihood for the input data according to the Kimura distribution (using bootstrapping)
 }
 \description{
-can enforce an initial h0 or leave as a free parameter. Can can use population or sample statistics. analyticVar offers a simplified version of this function to compute the standard error of the variance.
+Can enforce an initial \emph{h0} or leave as a free parameter. Can can use population or sample statistics. \emph{analyticVar} offers a simplified version of this function to compute the standard error of the variance.
 }
 \examples{
  X.1 = rnorm(50,0.5,0.1)

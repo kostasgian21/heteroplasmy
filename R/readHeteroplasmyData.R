@@ -1,7 +1,7 @@
 #' A Function to read mouse heteroplasmy data (not finished!)
 #'
 #' This function allows you to read mouse heteroplasmy data from external files.
-#' Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, mousedataHB,mousedataLE,mousedataFreyer).
+#' Use with caution (for now). Calling this function is equivalent to loading the already stored dataframe with heteroplasmy measurements (ie, \emph{mousedataHB},\emph{mousedataLE},\emph{mousedataFreyer}).
 #' @param nameD Either "HB" or "LE" or "Freyer" or "Broz".
 #' @return A dataframe containing mouse heteroplasmy data.
 #' @keywords heteroplasmy data
